@@ -1,0 +1,32 @@
+language: node_js
+
+node_js: stable
+
+branches:
+  only:
+  - blog-source
+
+cache:
+  directories:
+  - node_modules
+
+before_install:
+  - export TZ=Asia/Beijing
+
+install:
+  - npm install
+
+before_script:
+  - git config --global user.name "SketchK"
+  - git config --global user.email "zhangsiqi1988@gmail.com"
+  - git config --global push.default simple
+
+script:
+  - git clone --branch master https://github.com/sketchk/sketchk.github.io.git .deploy/sketchk.github.io
+  - hexo generate
+  - cp -R public/* .deploy/sketchk.github.io
+  - cd .deploy/sketchk.github.io
+  - git add .
+  - MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
+  - git commit -m "Travic CI Auto Build & Blog updated:$MESSAGE"
+  - git push --quiet https://SketchK:$TRAVIS_CI_DEPLOY_BLOG_TOKEN@github.com/SketchK/SketchK.github.io.git
