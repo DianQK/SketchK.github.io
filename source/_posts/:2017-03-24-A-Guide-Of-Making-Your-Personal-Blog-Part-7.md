@@ -5,11 +5,6 @@ date: 2017-03-24 23:42:36
 updated:
 tags:
 	- Blog
-	- Hexo
-	- Next
-	- Travis CI
-	- Domain
-	- GitHub Pages
 categories:
 	- DIY
 	- Blog
@@ -19,6 +14,18 @@ categories:
 终于把教程写完了，现在让我总结一下！
 
 <!-- more -->
+
+![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+
+**A Guide Of Making Your Personal Blog 系列**
+
+* [Part 1：概述](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-1/)
+* [Part 2：域名与服务器](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/)
+* [Part 3：域名解析](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/)
+* [Part 4：博客框架](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-4/)
+* [Part 5：博客主题](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-5/)
+* [Part 6：自动部署](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-6/)
+* [Part 7：总结与参考资料](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-7/)
 
 ## Afterword
 
