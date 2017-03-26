@@ -178,9 +178,9 @@ git push -f -q https://<username>:$GITHUB_TOKEN@github.com/<username>/<repo>
 
 ![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-Jietu20170321-185415-2x.jpg)
 
-点击完以后会要求你重新输入一遍 `GitHub` 的密码，然后就会进入下面的界面，这个界面大概是在说我们应该赋予这个 `token` 的权限有哪些，根据目前的要求，我们只需要把 `repo` 选项框里的前两个权限勾上即可，如果你的博客有一些特殊的需求，就根据自己的情况选择吧。
+点击完以后会要求你重新输入一遍 `GitHub` 的密码，然后就会进入下面的界面，这个界面大概是在说我们应该赋予这个 `token` 的权限有哪些，根据目前的要求，我们需要把 `repo` 选项框里的权限勾上即可，如果你的博客有一些特殊的需求，就根据自己的情况选择吧。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-24-Jietu20170324-160029-2x.jpg)
+![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-26-141206.jpg)
 
 勾选完后，点击最底下的 `Generate Token` 按钮，你就会得到一个 `token`，唯一需要注意的是 `token` 的值只会显示一次，所以记得把这个值保存一下。
 
@@ -238,25 +238,31 @@ node_js: stable
 branches:
   only:
   - blog-source
-  - blog-theme
+
+cache:
+  directories:
+  - node_modules
+
+before_install:
+  - export TZ=Asia/Beijing
 
 install:
-- npm install
+  - npm install
 
 before_script:
-- git config --global user.name "SketchK"
-- git config --global user.email "zhangsiqi1988@gmail.com"
-- git config --global push.default simple
+  - git config --global user.name "SketchK"
+  - git config --global user.email "zhangsiqi1988@gmail.com"
+  - git config --global push.default simple
 
 script:
-- git clone --branch master https://github.com/sketchk/sketchk.github.io.git .deploy/sketchk.github.io
-- git clone --branch blog-theme https://github.com/SketchK/SketchK.github.io.git themes/next
-- hexo generate
-- cp -R public/* .deploy/sketchk.github.io
-- cd .deploy/sketchk.github.io
-- git add .
-- git commit -m "Travic CI Auto Build"
-- git push --quiet https://SketchK:${TraviS CI - Hexo}@github.com/SketchK/SketchK.github.io.git
+  - git clone --branch master https://github.com/sketchk/sketchk.github.io.git .deploy/sketchk.github.io
+  - hexo generate
+  - cp -R public/* .deploy/sketchk.github.io
+  - cd .deploy/sketchk.github.io
+  - git add .
+  - MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
+  - git commit -m "Travic CI Auto Build & Blog updated:$MESSAGE"
+  - git push --quiet https://SketchK:${TraviS CI - Hexo}@github.com/SketchK/SketchK.github.io.git
 
 ```
 
@@ -269,6 +275,10 @@ script:
 `language` 和 `node_js` 分别告诉 `Travis CI` 我们需要使用 `node.js`，它的版本是 `stable` 的。
 
 `branch` 部分的代码是告诉 `Travis CI` 只监控 `blog-source` 分支的变化，只有这个分支产生变化了才会执行下面的操作。或许你会好奇 `blog-source` 分支具体产生何种变化才会开始构建？其实我们在前面已经设定过了，如果忘了，请仔细看看 `开启仓库的 Travis CI 功能` 一节的内容。
+
+#### before_install 标签中的操作
+
+在这里我们引入了一个 `TZ` 变量，它的值是当前的北京时间。
 
 #### install 标签中的操作
 
@@ -291,10 +301,8 @@ script:
 这一段的代码与我们之前的 `deploy.sh` 文件的代码十分相似。不过需要需要注意的是我们这次 `push` 的地址是与之前的方式不一样的，它的通用样式如下：
 
 ```sh
-git push https://<username>:$GITHUB_TOKEN@github.com/<username>/<repo>
+git push --quiet https://<username>:$GITHUB_TOKEN@github.com/<username>/<repo>
 ```
-
-不过就像我的示例代码中，在 `push` 后面一定要加 `--quiet` 参数，因为不加这个参数的时候会把 `$GITHUB_TOKEN` 的具体值显示出来，这样我们之前的加密工作就白费了
 
 ## 几个需要注意的地方
 
@@ -303,6 +311,8 @@ git push https://<username>:$GITHUB_TOKEN@github.com/<username>/<repo>
 * `- git config --global push.default simple` 是 `Git 2.0` 带来的改变，如果我们不写这句话，在 `Travis CI` 里会看到一些 `warning` ，不过没有它似乎也不会有什么问题，只是后面的参数为 `simple` 的时候，执行 `git push` 且 没有指定分支时，只有当前分支会被 `push` 到对应的远程仓库。
 
 * 如果你的 `Token` 中有一些特殊操作符，那么在进行 push 操作时，你可以像我的示例代码中一样使用 `{ }` 的方式把 `Token` 包起来，如果没有空格直接按照通用样式就可以了。
+
+* 在调试的时候可以不用加 `--quiet` 参数，调试成功后，一定要在 `push` 后面加 `--quiet` 参数并换一个新的 token ，因为不加这个参数的时候，Travis CI 会把 `$GITHUB_TOKEN` 的值显示出来。你问我为什么会显示出来？因为你这个仓库 Travis CI 记录是任何人都可以看到的啊。
 
 * 至于为什么把 `push` 操作放到 `script` 中，这是因为 `Travis CI` 判断构建项目的成功与失败主要在 `script` 中完成，如果我们把 `push` 操作放到 `after_script` 或者 `after_success` 中，即使 `push` 失败了，`Travis CI` 也会显示此次的构建成功。所以为了能够保证自动部署的成功，我把这个步骤放到了 `script` 中。
 
