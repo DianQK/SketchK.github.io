@@ -1,0 +1,1351 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="MfNxc_no8WBSrR5-nctOuC5mwnz2a4enrKi9AUb2DvU" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Source Sans Pro bold:300,300italic,400,400italic,700,700italic|Open Sans bold:300,300italic,400,400italic,700,700italic|Open Sans:300,300italic,400,400italic,700,700italic|Source Sans Pro bold:300,300italic,400,400italic,700,700italic|Space Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS,Personal App," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="SketchK's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="说一说我的第一个个人开源作品，它看似一篇技术文章，但也有点像鸡汤…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FOUR - 一个27岁零基础无业游民的第一个开源作品">
+<meta property="og:url" content="http://sketchk.xyz/2016/07/26/FOUR-My-First-Open-Source-App/index.html">
+<meta property="og:site_name" content="SketchK's Blog">
+<meta property="og:description" content="说一说我的第一个个人开源作品，它看似一篇技术文章，但也有点像鸡汤…">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-af6628cb70e168c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-66eb48e5ed7de8e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-eaa6db9e77367073.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-f74ac694eb798a9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-42a1b3d55abd8bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-2dea1ca5e61804b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-545f5eb571dc62f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-30f71a585a80360f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-0c5dac8ea2967c35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-096d1146b5fe5b76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-2de85bf0383b2d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-83be71d96ca2f205.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-884d08faac41c0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-5d23d8090acce3c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-43b155d16320b4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-5fa7a92014fec201.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-29f00ddcbcd8aa27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-47c4f45b189b9dbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-f09df1f0d38bbc47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-656bc45e86a09a1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-a99e55cbe2a36751.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-4c74b25da8062ec5.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-a7a4afc0b4a8c8f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/406302-69d048bb665f2f88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-26T13:20:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FOUR - 一个27岁零基础无业游民的第一个开源作品">
+<meta name="twitter:description" content="说一说我的第一个个人开源作品，它看似一篇技术文章，但也有点像鸡汤…">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/406302-af6628cb70e168c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sketchk.xyz/2016/07/26/FOUR-My-First-Open-Source-App/"/>
+
+
+
+
+
+  <title> FOUR - 一个27岁零基础无业游民的第一个开源作品 | SketchK's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-94029608-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b07ee1cf0a99dfb6056d7888e386b323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SketchK's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://sketchk.xyz/2016/07/26/FOUR-My-First-Open-Source-App/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SketchK">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SketchK's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                FOUR - 一个27岁零基础无业游民的第一个开源作品
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-26T03:31:27+08:00">
+                2016-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/07/26/FOUR-My-First-Open-Source-App/" class="leancloud_visitors" data-flag-title="FOUR - 一个27岁零基础无业游民的第一个开源作品">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>说一说我的第一个个人开源作品，它看似一篇技术文章，但也有点像鸡汤…</p>
+<a id="more"></a>
+<h2 id="写在前面的废话"><a href="#写在前面的废话" class="headerlink" title="写在前面的废话"></a>写在前面的废话</h2><blockquote>
+<p>如果你不喜欢看废话，可以直接绕过第一段哦 : ]</p>
+</blockquote>
+<p>我是一名 14 年毕业的研究生，当时的主攻方向是能源科技领域，离开校园后就去了上海的一家外企当起了管理培训生，后来还参与了朋友的创业项目，在外人看来，这样的生活还不错。但就是这样还不错的生活，让我一直隐约的感觉到不安，所以在去年的时候，我跟家人说想辞掉现在所有的工作，尝试去做一名程序员。</p>
+<p>这样的决定让我的家人和朋友都十分不解，在他们看来我在本科和研究生阶段所学的东西都跟计算机沾不上边（事实情况也确实如此），而且我也已经27岁了，重新进入一个完全陌生的领域代价实在是太大了，虽然有很多不利的因素，但我在今年年初参加完 AtCont 在北京组织的 Swift 开发者大会后，终于下定了决心。</p>
+<p>其实参加会议本身到没有什么内容刺激到我，因为当时参会的时候，我甚至都没看完 Swift Programming Language 这本书，现场听得懂的内容也屈指可数（PS :我可是全场唯一一个从新疆赶到北京参会的人啊，但当时我真的一点都不懂 Swift ……），但真正刺激到我的还是这个大环境，为什么这么说呢？</p>
+<p>这还要说到现场发生的一个小插曲，会议当天，坐在我前面的是一个帅哥，我完全不认识，大概没多久，我看到<a href="http://weibo.com/kevinzhow?from=feed&amp;loc=at&amp;nick=%E5%91%A8%E6%A5%B7%E9%9B%AFKevin&amp;is_hot=1" target="_blank" rel="external">@周楷雯Kevin</a>从前排起身要出去，刚好路过我这，本以为他就会这么走过去，但他突然停下来，好像认出了坐在我前面的男子，然后两人像老熟人一样说起了话，话里的内容一部分是互相寒暄，另一部分则是对对方作品的赞赏和肯定，后来我才知道坐在我前面的这位男子是<a href="https://itunes.apple.com/app/id947792507" target="_blank" rel="external">奇点</a>的作者<a href="http://www.weibo.com/tualatrix?from=feed&amp;loc=avatar&amp;is_hot=1" target="_blank" rel="external">@图拉鼎</a> 先生，最神奇的是我当时最爱用的微博客户端就是奇点，而此时它的开发者就坐在我的面前…ORZ</p>
+<p>这只是当天会议中的许多场景中的某一个片段，你可以在午休时段，看到很多开发者通过某个作品认识到了新的朋友，这让我觉得在这里，人与人之间的关系很简单，有时候可能就是通过在 GitHub 或者 App Store 上的作品，就能把两个完全不认识的，甚至不同肤色，不同国籍，不同语言的两个人联系到一块，这里不是一个靠关系，靠背景的地方，而是一个靠实力，靠能力来说话的地方。</p>
+<p>Anyway ，就是这样一次看似简单的参会经历，让我决定了从零基础开始学习 iOS 开发。</p>
+<h2 id="FOUR-的由来"><a href="#FOUR-的由来" class="headerlink" title="FOUR 的由来"></a>FOUR 的由来</h2><p>开发这个 app 的初衷一方面是因为看完了《异类》这本书后颇受启发，一方面是觉得如果今后找工作的话，像我这样非计算机专业出身的开发者，怎么也得有个自己的作品才好，所以带着这样的目的，我决定开发一款基于 <code>The 10000 Hour Rule</code> 的 app 。</p>
+<p>至于为什么叫 FOUR ，就像我在 app 的引导页中所说一样，假如每天花4个小时去做一件事，至少也需要十年左右才能达成一万小时的要求，所以照此推算，我们在六十岁的时候大概也就能实现四个人生大目标吧，所以就起名叫 FOUR 喽！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-af6628cb70e168c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The 10000 Hour Rule"></p>
+<h2 id="FOUR-的起点"><a href="#FOUR-的起点" class="headerlink" title="FOUR 的起点"></a>FOUR 的起点</h2><h3 id="开发前的思考"><a href="#开发前的思考" class="headerlink" title="开发前的思考"></a>开发前的思考</h3><p>在开发这款 app 时，我曾经认真思考过到底用哪种技术来实现，纯 OC or 纯 Swift , 或者用 React-Native ,  Reactive-Cocoa ，RxSwift 的思想来实现？</p>
+<p>面对这些个选择，最开始的时候我是想着用点新技术，虽然使用新技术是体现自己的学习能力，但考虑到时间成本我决定还是先暂时放一放。</p>
+<p>在 OC 和 Swift 的选择中，虽然现在大趋势是 Swift ，我自己也系统的学习了 Swift 语言，但考虑到3.0即将到来，我选择采用 OC 开发的策略，一方面可以避免 Swift 语言版本的更新问题，一方面我认为只有在同一个项目中使用两种不同的语言进行开发才可以更好的去理解这两种语言的差异和优劣，所以我不妨先用OC写一遍，等程序比较稳定且 Swift 3.0 正式发布后，我再用 Swift 写一遍，这样岂不是效率更高一些么？</p>
+<p>至于 React-Native，Reactive-Cocoa，RxSwift 这样的东西，如果以后有机会，当然也会来写一遍。</p>
+<p>为什么？</p>
+<p>难道终身学习不是一个程序员的自我修养么！！！</p>
+<h3 id="竞品分析"><a href="#竞品分析" class="headerlink" title="竞品分析"></a>竞品分析</h3><p>关于 app 的 UI 设计，我觉得在某种程度上还是蛮重要的，毕竟用户不会直接看到你的代码写的多漂亮，逻辑有多清晰，架构有多合理，他们看到的只是你在手机上的展示的东西，所以 UI 设计的工作就显得尤为重要。<br>周楷雯在 <a href="http://producter.io/" target="_blank" rel="external">《Producter》</a> 一书说道：</p>
+<blockquote>
+<p>“设计总是从模仿开始，在我的记忆里，第一次做设计是在 Ubuntu 7.04 上用 GIMP 制作壁纸，模仿 Mac 的霞光壁纸，那还是 2007 年的事。”</p>
+</blockquote>
+<p>所以，我决定也从模仿开始做起，那么模仿什么呢？不如看看 App Store 里都有哪些 app 吧，于是我搜索了与 <code>10000 hour rule</code> 相关的 app ，在搜索前几名的 app 如下：</p>
+<ol>
+<li>iHour<br>iHour 的功能十分丰富，但正因为丰富的功能设定，使得我在使用过程中显得有些不知所措，但是从功能和设计的角度上来说，这款 app 有不少值得我去借鉴的地方。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-66eb48e5ed7de8e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iHour界面截图"></p>
+<ol>
+<li>10,000 hours<br>这款 app 虽然看起来相当简陋，也只能添加一个 Task ，但它给我最深刻感受就是简单明了，尤其在我进入 app 的主界面后，没有花费太多时间就能明白制作者的意图，并很快的熟练使用起来，这种设计理念我十分喜欢，虽然设计感还有待提高，但用户的体验还是很好的，这总比花了好几分钟都没有找到计时功能的 iHour 好很多。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-eaa6db9e77367073.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="10,000 hours界面截图"></p>
+<ol>
+<li>Color Time<br>这款 app 呢，我觉得最大的亮点在于 Task 中详细信息的展现上，可以看出开发者肯定是有想法的，不知道是受限于技术问题，还是设计问题，在最终的展现上让人看起来有些奇怪，但不可否认，开发者肯定是想以一种不同于前两个 app 的方式来表达 Task 中的详细信息。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-f74ac694eb798a9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Color Time界面截图"></p>
+<ol>
+<li>10000 Hours To Success<br>这个 app 在某种程度上和 iHour 十分相似，有着不错的 UI 设计，但复杂的操作和奇怪的逻辑让用户的体验感变差不少，尤其是它添加任务，记录任务的方式让我觉得实在太不人性化。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-42a1b3d55abd8bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="10000 Hours To Success界面截图"></p>
+<ol>
+<li>10000 Hours<br>对于这个 app 而言，你看下面的截图就可以清楚的感受到它的优点和缺点。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-2dea1ca5e61804b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="10000 Hours界面截图"></p>
+<ol>
+<li>Outliers - Law of 10,000 hours<br>说实话，这个 app 的售价是 12 RMB，但我觉得这有点对不起它自己的售价。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-545f5eb571dc62f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Outliers - Law of 10,000 hours界面截图"></p>
+<p>在使用完上面六款 app 后，我总结了以下几点感受：</p>
+<ul>
+<li>优雅的UI设计会为 app 增分，即使用起来有些别扭，毕竟这是一个看脸的社会</li>
+<li>合理的交互设计会减少用户的学习负担，一个好的 app 不应该有过多的提示操作，而是应该以一种简明的设计方式来引导用户学习使用</li>
+<li>对于类似 To-Do List 类的 app 而言，记录任务和展示信息是两个十分重要的环节，一方面这是用户使用频率最高的环节，一方面也是展现开发者智慧的地方</li>
+</ul>
+<h2 id="FOUR-的雏形"><a href="#FOUR-的雏形" class="headerlink" title="FOUR 的雏形"></a>FOUR 的雏形</h2><h3 id="关于界面设计"><a href="#关于界面设计" class="headerlink" title="关于界面设计"></a>关于界面设计</h3><p>FOUR 的设计灵感最初来自 <a href="https://dribbble.com/noah_bomb" target="_blank" rel="external">noahbombom</a> 在 Dribbble 上的设计稿，我被这个设计稿吸引的原因有两点：</p>
+<ul>
+<li>一是因为图片上面刚刚好够展示 4 个图标。</li>
+<li>二是其简单大方的设计感，让我很直观的感受到设计者的意图。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-30f71a585a80360f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="noahbombom的设计稿"></p>
+<p>选定完样式以后，我就开始考虑 app 的配色问题， noahbombom 在她的设计稿上使用的是非常经典的四个颜色：红黄蓝绿，这四个颜色在很多知名的 app 上都有过不同的展现方式。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-0c5dac8ea2967c35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="使用红黄蓝绿四个颜色的 LOGO "></p>
+<p>正因为红黄蓝绿的经典性，我考虑将其移植到我的 app 设计稿中。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-096d1146b5fe5b76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Logo 的设计稿"><br><img src="http://upload-images.jianshu.io/upload_images/406302-2de85bf0383b2d23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主要界面的效果图"></p>
+<h3 id="关于字体设计"><a href="#关于字体设计" class="headerlink" title="关于字体设计"></a>关于字体设计</h3><p>前段时间， <a href="http://weibo.com/u/1956547962?refer_flag=1001030201_" target="_blank" rel="external">MartinRGB</a> 在它的朋友圈里发表了一篇文章 - <a href="https://zi.com/w/a?id=57723a5f0cf29338e7e9a539&amp;shareId=d77bc23e-1e24-46c7-97b7-1932691da2cd&amp;wechatId=o3eBLuDx89dXfBA6HGVeQpsoqGog" target="_blank" rel="external">惬读的设计</a>，这篇文章对我的感触挺大，我觉得虽然 FOUR 不是一款阅读类的 app ，但字体对于用户的体验终究是至关重要的。</p>
+<p>不过遗憾的是我对中文字体的理解没有那么深刻，更别说去合理的搭配字体来营造一种十分惬意的感觉，所以我在 FOUR 上并没有对中文字体进行任何的优化和设计。</p>
+<p>不过值得高兴的是，由于我平时对各类英文字体有过些许研究，加上自己也会写写画画，所以在制作 FOUR 的时候，我尝试着用 MartinRGB 的思维方式为 FOUR 设计一套合适的字体组合。<br><img src="http://upload-images.jianshu.io/upload_images/406302-83be71d96ca2f205.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的英文字体作品"></p>
+<p>以下是我在总结前人经验的基础上，挑选出的几套比较优秀的字体搭配组合，同时我也将网上使用这种字体组合的应用场景找了出来，以便大家直观的感受。<br>简单的说明一下，下面的图片左边是对当前字号大小和字体细分种类的说明，图片右边的单词就是字体的名称哦。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-884d08faac41c0ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合1"></p>
+<p>Lato 是一个相对而言较新的字体，它在设计之初被广泛用于带有用户界面的网站设计，这主要是因为它给人一种坚固感和些许的中性风格。 Lato 这个词出自波兰语，关于它的解释呢，我觉得还是用英文原文来做解释比较好，这样能不破坏它的语义。</p>
+<blockquote>
+<p>Lato means “Summer” in Polish. “Male and female, serious but friendly. With the feeling of the Summer,”<br>– Łukasz Dziedzic, Lato creator.</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-5d23d8090acce3c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合2"></p>
+<p>这个无衬线的字体组合是根据传统的广告字体进化而来，它能够很快的抓住用户的注意力，尤其是它的一级字体和二级字体造成了很好的视觉对比效果。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-43b155d16320b4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合3"></p>
+<p>Kollektif 字体诞生的目的就是为了打破几何字体精致清新的风格，这种字体的视觉冲击感主要在于它的圆形设计和强烈的设计感。而 Gidole 字体是一种细而简明的字体，这与 Kollektif 的沉重感形成了一种很好的互补效果。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-5fa7a92014fec201.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合4"></p>
+<p>Six Caps 是一种非常紧凑且窄瘦的字体，非常适合用于做标题。与 Archivo Narrow 搭配后能够营造出一种60年代的复古风。加上三级字体采用了 Source Sans Pro 后，三种风格迥异的字体能够很好的表达或者从某种程度上暗示出消息的重要性和顺序性。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-29f00ddcbcd8aa27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合5"></p>
+<p>Raleway 和 Roboto Condensed 的组合在很多海报中都被使用过，这是一个非常非常经典的搭配，由它们构成的主副标题会给人十分深刻的印象。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-47c4f45b189b9dbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合6"></p>
+<p>Bebas Neue 在时尚领域里非常讨好，它简明干净的形式使它具有成为一个好标题的所有基本条件，它自身具有很漂亮圆角设计感，同时相比于其他字体来说，它是一个偏瘦的字体，如果有一个相比它而言较为矮胖的字体就会是一个完美的搭配，刚好 Montserrat 就是这样一个非常好的搭配角色。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-f09df1f0d38bbc47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合7"></p>
+<p>Norwester 是一个非常引人注目的字体，非常适合做标题，当 Norwester 与 Kollektif ，还有 Montserrat 组合在一起能够产生一种极其强烈的几何效果感觉，这也是我非常非常喜欢的一个字体组合。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-656bc45e86a09a1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="字体组合8"></p>
+<p>Roboto Condensed 是 Sans serif 系列的衍生体，十分适合阅读，它被广泛引用在科技领域的文字设计中。相比于它的父类，它在高度上的变化使得它给人一种更加强烈的凝聚感。</p>
+<p>对这8种字体组合做完分析后，我认为字体组合1给我的感觉与 FOUR 的气质十分契合，不求轰轰烈烈，只求天长地久， Lato 字体的踏实稳重感正是 FOUR 需要的，所以就选它了！</p>
+<h2 id="FOUR的实现"><a href="#FOUR的实现" class="headerlink" title="FOUR的实现"></a>FOUR的实现</h2><p>回顾 FOUR 的整个制作过程，如果从技术角度来看它的话，其实它并没有什么特别的技术难点。</p>
+<ul>
+<li>在设计模式上，选用了最常见的 MVC 模式。</li>
+<li>在数据库上，我使用了移动端的新贵- <a href="https://realm.io/" target="_blank" rel="external">Realm</a> ，原因很简单： Realm 真的好用到哭，有没有！！！</li>
+<li>在动画上，用 <a href="https://github.com/IFTTT/JazzHands" target="_blank" rel="external">JazzHands</a> 框架实现了引导页上的动画效果，用 <a href="https://github.com/facebook/pop" target="_blank" rel="external">pop</a> 框架实现了其余部分的动画效果。</li>
+<li>在 UI 界面上，咳咳咳，请允许我吐槽一下！但凡在 Github 搜到的那些精致漂亮的 UI 框架都是用 Swift 编写的，为毛就没有人用 OC 写呢！！！哎，好吧，自己从头搭建吧….</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-a99e55cbe2a36751.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FOUR 的界面构成"></p>
+<p>仔细琢磨下，唯一值得分享的就是 Analysis 界面的实现，首先用一个动图来展示下它的效果吧。<br><img src="http://upload-images.jianshu.io/upload_images/406302-4c74b25da8062ec5.gif?imageMogr2/auto-orient/strip" alt="Analysis界面的动态效果"></p>
+<p>这个界面看起来十分简单，但它能展现的内容却十分丰富：</p>
+<ul>
+<li>首先它包含每个任务在近一周内的执行时间趋势图。</li>
+<li>其次在触摸和滑动曲线的过程中，下端的界面可以弹出任务在某一天内执行的时间长度。</li>
+<li>最后在相同的界面中，可以展现出多个任务的曲线走势图。</li>
+</ul>
+<p>它的实现主要还是基于 <a href="https://github.com/Jawbone/JBChartView" target="_blank" rel="external">JBChartView</a> 的 Demo 而想到的。所以如果大家有兴趣，可以直接阅读该框架的Demo文件，我想一定会有不小的收获，如果你觉得看起来麻烦，也可以看看 <strong><a href="https://github.com/SketchK/FOUR" target="_blank" rel="external">FOUR</a></strong> 的源代码。</p>
+<h2 id="FOUR-的诞生"><a href="#FOUR-的诞生" class="headerlink" title="FOUR 的诞生"></a>FOUR 的诞生</h2><p>经过大概 3 周左右的时间，我终于将 FOUR 从一个模糊的概念变成了一个具体的 app ，虽然它还存在着各种各样的缺点，但对于我这样一个半年前还从来未接触过编程的人而言，那种强烈的成就感是不言而喻的。</p>
+<p>我到现在还记得当时大概是下午 2 点多提交的 app ，之后我就以每隔半小时的速度刷一遍邮箱，期待着 Apple 的回复。直到凌晨 3 点多，我终于收到审核通过的邮件，那一刻的心情，觉得比当年考上大学还要激动，弄得我后半夜都没睡着。</p>
+<p>Anyway ，终于实现了自己在 2015 年给自己许下的心愿。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-a7a4afc0b4a8c8f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Apple的审核通知邮件"></p>
+<p>虽然 FOUR 的上架对于我来说是近期工作的一个终点，但从长远来看，这或许才是我在 iOS 开发道路上真正意义上的一个起点。</p>
+<p>因此，在 app 上架后，我就将其在 GitHub 上开源了，一方面是希望通过它来记录自己的技术成长，一方面也是希望以后能够有机会和更多优秀的人共同工作，共同成长。<br>至于未来，我希望能像前面说的一样，逐步完成 FOUR 的 swift 版本， React-Native 版本， React-Cocoa 版本等等。</p>
+<p>下面是 FOUR 在 Github 和 App Store 上的地址：</p>
+<p><strong>GitHub</strong> ： <a href="https://github.com/SketchK/FOUR" target="_blank" rel="external">https://github.com/SketchK/FOUR</a><br><strong>App Store</strong> ： <a href="https://itunes.apple.com/app/id1136588862" target="_blank" rel="external">https://itunes.apple.com/app/id1136588862</a></p>
+<p>如果您喜欢 FOUR ，记得给我点个星星哦！</p>
+<p>如果对项目任何问题，欢迎在项目主页上提 issue 。</p>
+<p>当然 FOUR 里还有个功能就 Donate ，如果各位觉得不错，可以考虑赞助我个可乐神马的！: ]<br>哈哈哈，在此先谢谢各位啦！</p>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>这篇文章基本就要结束了，可能也没什么干货，就是说了说我在制作 FOUR 时都想了什么，做了什么，干了什么。</p>
+<p>如果非要说说这篇文章的意义所在，我想应该是：</p>
+<blockquote>
+<p>我希望通过这篇文章,能够激励更多的人以一种踏踏实实的方式去追寻他们内心向往的东西。</p>
+</blockquote>
+<p>PS：说这些是因为在加入的这些个 iOS 开发者微信群里，总能听到行业内的人说今天面试了几个伪造简历的年轻人，或者说某某培训机构教学生包装假简历。</p>
+<p>我很难想像现在的 iOS 就业市场中，还能有多少比我这样一个已经快要 30 岁，无相关行业经历，无相关专业背景，完全零基础，天资平平的人条件还要差。</p>
+<p>在这里我并不想说谁好谁不好，谁对谁不对，我只是觉得踏踏实实的去走自己的路或许能收获更多，至少会多一份自信，少一份不安。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/406302-69d048bb665f2f88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Let&#39;s Be Honest"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      SketchK
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://sketchk.xyz/2016/07/26/FOUR-My-First-Open-Source-App/" title="FOUR - 一个27岁零基础无业游民的第一个开源作品">http://sketchk.xyz/2016/07/26/FOUR-My-First-Open-Source-App/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+            <a href="/tags/Personal-App/" rel="tag"># Personal App</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/30/The-Detail-Of-ResizableImageWithCapInsets-Method/" rel="next" title="resizableImageWithCapInsets:方法的探析">
+                <i class="fa fa-chevron-left"></i> resizableImageWithCapInsets:方法的探析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/20/New-Debugging-Feature-In-Xcode8/" rel="prev" title="Xcode 8 的 Debug 新特性 ---- WWDC 2016 Session 410 & 412 学习笔记">
+                Xcode 8 的 Debug 新特性 ---- WWDC 2016 Session 410 & 412 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzgxNS80Mzkx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SketchK" />
+          <p class="site-author-name" itemprop="name">SketchK</p>
+           
+              <p class="site-description motion-element" itemprop="description">Do One Thing And Do It Well</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SketchK" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/SketchK_QiYe" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/100005521171731" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/5480886/sketchk" target="_blank" title="StackOverFlow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                  StackOverFlow
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.freecodecamp.com/sketchk" target="_blank" title="FreeCodeCamp">
+                  
+                    <i class="fa fa-fw fa-free-code-camp"></i>
+                  
+                  FreeCodeCamp
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1673935657" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-si-qi-72/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-quora"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.dianqk.org/" title="靛青君" target="_blank">靛青君</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.cee.moe/" title="Cee妹" target="_blank">Cee妹</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://maizee.github.io/" title="VP" target="_blank">VP</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面的废话"><span class="nav-number">1.</span> <span class="nav-text">写在前面的废话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOUR-的由来"><span class="nav-number">2.</span> <span class="nav-text">FOUR 的由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOUR-的起点"><span class="nav-number">3.</span> <span class="nav-text">FOUR 的起点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开发前的思考"><span class="nav-number">3.1.</span> <span class="nav-text">开发前的思考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#竞品分析"><span class="nav-number">3.2.</span> <span class="nav-text">竞品分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOUR-的雏形"><span class="nav-number">4.</span> <span class="nav-text">FOUR 的雏形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于界面设计"><span class="nav-number">4.1.</span> <span class="nav-text">关于界面设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于字体设计"><span class="nav-number">4.2.</span> <span class="nav-text">关于字体设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOUR的实现"><span class="nav-number">5.</span> <span class="nav-text">FOUR的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOUR-的诞生"><span class="nav-number">6.</span> <span class="nav-text">FOUR 的诞生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尾声"><span class="nav-number">7.</span> <span class="nav-text">尾声</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SketchK</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("85wNtl2CDolbFjdPaFK9NyOp-gzGzoHsz", "COSG9ew1WcWYxFMm01vaxzSu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

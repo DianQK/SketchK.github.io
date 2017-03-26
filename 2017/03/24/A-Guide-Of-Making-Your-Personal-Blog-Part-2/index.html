@@ -1,0 +1,1374 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="MfNxc_no8WBSrR5-nctOuC5mwnz2a4enrKi9AUb2DvU" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Source Sans Pro bold:300,300italic,400,400italic,700,700italic|Open Sans bold:300,300italic,400,400italic,700,700italic|Open Sans:300,300italic,400,400italic,700,700italic|Source Sans Pro bold:300,300italic,400,400italic,700,700italic|Space Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Blog,Hexo,Next,Travis CI,Domain,GitHub Pages," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="SketchK's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这篇文章会围绕域名和服务器的话题展开，同时也会说点关于 Git 的话题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Guide Of Making Your Personal Blog - Part 2">
+<meta property="og:url" content="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/index.html">
+<meta property="og:site_name" content="SketchK's Blog">
+<meta property="og:description" content="这篇文章会围绕域名和服务器的话题展开，同时也会说点关于 Git 的话题。">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-124814.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-125025.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-125800.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-071740.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-process.png">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-072951.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Github2.png">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-053621.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-073045.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-064714.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-063106.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-065819.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-071136.jpg">
+<meta property="og:updated_time" content="2017-03-26T13:20:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Guide Of Making Your Personal Blog - Part 2">
+<meta name="twitter:description" content="这篇文章会围绕域名和服务器的话题展开，同时也会说点关于 Git 的话题。">
+<meta name="twitter:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-124814.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/"/>
+
+
+
+
+
+  <title> A Guide Of Making Your Personal Blog - Part 2 | SketchK's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-94029608-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b07ee1cf0a99dfb6056d7888e386b323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SketchK's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SketchK">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SketchK's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                A Guide Of Making Your Personal Blog - Part 2
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T23:41:59+08:00">
+                2017-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/" itemprop="url" rel="index">
+                    <span itemprop="name">DIY</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/" class="leancloud_visitors" data-flag-title="A Guide Of Making Your Personal Blog - Part 2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这篇文章会围绕域名和服务器的话题展开，同时也会说点关于 <code>Git</code> 的话题。</p>
+<a id="more"></a>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>搭建个人博客这件事，首先一定要弄个域名吧，要不然怎么彰显这是你的个人博客呢？</p>
+<h3 id="在-GoDaddy-上购买域名"><a href="#在-GoDaddy-上购买域名" class="headerlink" title="在 GoDaddy 上购买域名"></a>在 GoDaddy 上购买域名</h3><p>购买域名的话，其实仁者见仁，智者见智，我个人是在 <a href="https://sg.godaddy.com/zh/" target="_blank" rel="external"><code>GoDaddy</code></a> 上买的, 当然，你要想在 <a href="https://wanwang.aliyun.com/" target="_blank" rel="external"><code>阿里云</code></a> 上买也 OK，毕竟条条大路通罗马，不过在这里我就以 <code>GoDaddy</code> 为例好了。</p>
+<ol>
+<li><p>注册并登录 <code>GoDaddy</code> 这种事我就不细说了！聪明的你一定可以完成的！</p>
+</li>
+<li><p>在搜索栏里寻找你感兴趣的域名，其实你随便输入一个字母就好，比如 <code>sketchk</code></p>
+<p> <img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-124814.jpg" alt=""></p>
+</li>
+<li><p>验证域名是否可用, 如果当前域名不可用会有提示，如果可用就会自动加到购物车</p>
+<p> <img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-125025.jpg" alt=""></p>
+</li>
+<li><p>选好以后点右上角的 <code>Continue to Cart</code> 按钮</p>
+</li>
+<li><p>稍等一会，你会进入到下面的页面，</p>
+<p> <img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-125800.jpg" alt=""></p>
+<ul>
+<li>第一个选项卡是在说，注册域名时，您的姓名、地址、电子邮件地址和电话号码都会自动发布到网上，大家都可以看见。借助 <code>GoDaddy</code> 隐私保护来保护自身免遭垃圾邮件和网络欺诈的侵害，它会将您的个人信息替换为 <code>GoDaddy</code> 的信息。</li>
+<li>第二个选项卡是在说你是否愿意使用 <code>GoDaddy</code> 提供的搭建网站服务，也就是 <code>GoCentral</code> 服务。</li>
+<li>第三个选项卡是说是否需要提供一个与你注册域名一致的邮箱地址。</li>
+<li>这些都是附加服务，如果你感觉有必要就买好了，当然如果你觉得都没必要，也完全可以都不选。</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>接下来就是填写一些个人信息了，这一步按照自己的情况填写就好。</p>
+</li>
+<li><p>最后就是付款了，记得在付款的时候去 <a href="http://www.dute.me/" target="_blank" rel="external"><code>独特优惠码</code></a> 上找点折扣，毕竟能省就省点呗。</p>
+</li>
+<li><p>付款结束后，你的注册邮箱会收到一封确认邮件，恭喜你，你现在拥有一个域名了！</p>
+</li>
+</ol>
+<p>好了，做完这些就代表你已经处理完与域名相关的大部分事情了，剩下的一些事，我们会在 <code>域名解析</code> 一节里完成，下面我们来说说服务器！</p>
+<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>在前一篇文章中，我们已经说了服务器像一个存放资源的地方，而存放资源的时候，你可以用一个小型仓库，也可以用一个中型仓库，甚至可以用一个大型仓库。那么我们应该选一个什么样的服务器呢？</p>
+<h3 id="关于服务器的几件事"><a href="#关于服务器的几件事" class="headerlink" title="关于服务器的几件事"></a>关于服务器的几件事</h3><p>用于搭建网站的服务器大概有以下几种：虚拟主机，虚拟专享服务器以及专属服务器，它们之间的区别可以参考下图的说明：</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-071740.jpg" alt=""></p>
+<p>像我们看到的大多数网站，其实都是“放”在服务器上的，然而，这个“放”其实并不像我们想的那么简单。</p>
+<p>如果你不太理解的话，让我举个可能不是那么恰当的例子吧！</p>
+<p>假如现在你已经拥有了一个域名并用 <code>HTML</code>，<code>CSS</code>，<code>JavaScript</code> 写好了一个堪称完美的网站，现在你把这些文件放在了某个服务器的磁盘中，那么你在另外一个电脑的浏览器里输入自己的域名会看到对应的网站么？</p>
+<p>答案肯定是看不到的！</p>
+<p>因为我们必须告诉服务器去监控各种各样的网络请求，让它能够对这些浏览器发送的网络请求进行分析，以便服务器能够知道这个请求到底想干嘛，然后再把这个请求想要的信息（例如 <code>HTML</code>，<code>CSS</code>，<code>JavaScript</code>）返回给对应的浏览器，这样你就能在浏览器上就能看到正确的内容了。</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-process.png" alt=""></p>
+<blockquote>
+<p>小白：额，什么是网络请求啊？<br>SketchK：当你在浏览器上输入一个域名并敲击了回车就完成了一次网络请求！</p>
+</blockquote>
+<p>所以说了这么多，你是不是突然意识到买服务器只是“服务器”这个 topic 里的一小部分。不过不要担心，因为我们还有更简单的办法，比如 <code>GitHub Pages</code>! </p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-072951.jpg" alt=""></p>
+<p><code>Github Pages</code> 是 <code>GitHub</code> 公司提供的免费静态网站托管服务，所以从严格的角度上说，<code>GitHub Pages</code> 并不是一个服务器，它只是提供了一种类似服务器的服务！那么这个服务到底是什么呢？</p>
+<p>简单来说就是：如果我们将写好的 <code>HTML</code> 等文件放到 <code>GitHub</code> 的指定位置时，<code>GitHub Pages</code> 就能对这些文件进行处理并把它们展示成一个网站，同时还会自动给这个网站提供一个特定的域名。假如我们对 <code>GitHub Pages</code> 提供的域名不喜欢，我们完全可以把域名改成我们自己想要的！</p>
+<p>所以仔细理解下这个服务的内容，是不是很符合我们的需求! </p>
+<ul>
+<li>我们只需要将资源放到 <code>GitHub Pages</code> 要求的地方就等于拥有了一台服务器。</li>
+<li>假如我们对 <code>GitHub Pages</code> 提供的域名不喜欢，我们还能把它换成在 <code>GoDaddy</code> 上买到的域名。</li>
+</ul>
+<p>好了，现在我们已经有解决方案了，那么我们将按照下面三个步骤来进行操作:</p>
+<ol>
+<li>安装 <code>Git</code></li>
+<li>注册 <code>GitHub</code> 账户</li>
+<li>开启 <code>GitHub Pages</code> 服务</li>
+</ol>
+<p>稍微等一下！<code>Git</code>, <code>GitHub</code>, <code>GitHub Pages</code> 这些都是神马东西！我已经完全不知所云了！Take it easy! 让我来简单的说明下吧：</p>
+<ul>
+<li><code>Git</code> 是一种软件，通过它可以控制代码的版本  </li>
+<li><code>GitHub</code> 是一个代码的托管平台，支持 <code>Git</code> 作为其代码的版本控制软件  </li>
+<li><code>GitHub Pages</code> 是…(我刚才不是说过了么，忘了就自己看看上面的解释吧)  </li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Github2.png" alt=""></p>
+<p>OK，废话就此结束了，准备实战！</p>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><blockquote>
+<p>如果你已经安装过 <code>Git</code> 了，那就跳过这一节吧！</p>
+</blockquote>
+<ul>
+<li>登录 <code>Git</code> 的官网：<a href="https://git-scm.com/" target="_blank" rel="external">https://git-scm.com/</a></li>
+<li>点击右边的 <code>DownLoads For Mac</code> 按钮</li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-053621.jpg" alt=""></p>
+<p>后面的事，咱就不用废话了。记住，安装完以后，在 terminal 上输入 <code>git --version</code> 来查看 Git 版本，只有安装成功才会显示出你的 Git 版本，所以你也可以通过这个方式来确认自己是否安装成功！</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-073045.jpg" alt=""></p>
+<h3 id="注册-GitHub"><a href="#注册-GitHub" class="headerlink" title="注册 GitHub"></a>注册 GitHub</h3><blockquote>
+<p>如果你已经注册过一个 <code>GitHub</code> 账户了，那就跳过这一节吧！</p>
+</blockquote>
+<ul>
+<li>登录 <code>GitHub</code> 的官网：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-064714.jpg" alt=""></p>
+<ul>
+<li>点击 <code>Sing Up</code> 进行注册，注册的过程就不细说了，你肯定能搞定的！</li>
+<li>在注册邮箱里面查收激活邮件并激活 <code>GitHub</code> 账户。记住，一定要激活！否则后面无法使用 <code>GitHub Pages</code> 服务。 </li>
+<li><p>设置 <code>Git</code> 的用户信息</p>
+<ul>
+<li><p>在命令行里输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;Your GitHub Name&quot;</div><div class="line">$ git config --global user.email &quot;Your-GitHub-Email-Address@example.com&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>配置 SSH Key</p>
+<ul>
+<li><p>创建 <code>SSH Key</code>。在用户主目录下，看看有没有 <code>.ssh</code> 目录，如果有，再看看这个目录下有没有 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开终端，创建SSH Key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"Your-GitHub-Email-Address@example.com"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。</p>
+</li>
+<li><p>如果一切顺利的话，可以在用户主目录里找到 <code>.ssh</code> 目录，里面有 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 两个文件，这两个就是 <code>SSH Key</code> 的秘钥对，<code>id_rsa</code> 是私钥，不能泄露出去，<code>id_rsa.pub</code> 是公钥，可以放心地告诉任何人。</p>
+</li>
+<li><p>登陆 <code>GitHub</code>，点击自己的头像，选择 <code>Settings</code>，再点击左边的 <code>SSH and GPG keys</code> 页面：</p>
+</li>
+<li><p>然后，点 <code>Add SSH Key</code>，填上任意 <code>Title</code>，在 <code>Key</code> 文本框里粘贴 <code>id_rsa.pub</code> 文件的内容：</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-063106.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>最后在终端里验证下是否配置成功</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T Your-GitHub-Email-Address@example.com</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果在过程中遇到下面的提示, 不要紧张，输入 <code>yes</code> 就好。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</div><div class="line">Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="开启-GitHub-Pages-服务"><a href="#开启-GitHub-Pages-服务" class="headerlink" title="开启 GitHub Pages 服务"></a>开启 GitHub Pages 服务</h3><blockquote>
+<p>温馨提醒：执行这一步时，一定要确保之前的配置都已经完成了哦！</p>
+</blockquote>
+<ul>
+<li><p>创建仓库</p>
+<ul>
+<li><p>点击右上角的 <code>+</code> 号后，选择 <code>New rpoository</code>，会进入如下界面：</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-065819.jpg" alt=""></p>
+</li>
+<li><p>在 <code>Repository name</code> 下填写 <code>Your-GitHub-Name.github.io</code>，<code>Description</code> 下填写一些简单的描述，另外记得勾选下 <code>Initialize this repository with a README</code> 选项，</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="测试一下"><a href="#测试一下" class="headerlink" title="测试一下"></a>测试一下</h2><p>在执行完上面的步骤之后，我们可以在浏览器中输入 <code>https://Your-GitHub-Name.github.io/</code> 这个网址, 记住 <code>YourGitHubName</code> 代表你自己的 <code>GitHub</code> 用户名。</p>
+<p>如果你能看到一个十分简陋的界面，就像下图所示一样,那么恭喜你。你已经成功开启了 <code>GitHub Pages</code> 服务啦。</p>
+<blockquote>
+<p>字号大的文字内容是仓库名称，字号小的是仓库信息。</p>
+</blockquote>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-071136.jpg" alt=""></p>
+<p>好了，关于域名和服务器的话题也算告一段落了。下一篇文章我们会说说博客框架的内容！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      SketchK
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/" title="A Guide Of Making Your Personal Blog - Part 2">http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Next/" rel="tag"># Next</a>
+          
+            <a href="/tags/Travis-CI/" rel="tag"># Travis CI</a>
+          
+            <a href="/tags/Domain/" rel="tag"># Domain</a>
+          
+            <a href="/tags/GitHub-Pages/" rel="tag"># GitHub Pages</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-1/" rel="next" title="A Guide Of Making Your Personal Blog - Part 1">
+                <i class="fa fa-chevron-left"></i> A Guide Of Making Your Personal Blog - Part 1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/" rel="prev" title="A Guide Of Making Your Personal Blog - Part 3">
+                A Guide Of Making Your Personal Blog - Part 3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzgxNS80Mzkx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SketchK" />
+          <p class="site-author-name" itemprop="name">SketchK</p>
+           
+              <p class="site-description motion-element" itemprop="description">Do One Thing And Do It Well</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SketchK" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/SketchK_QiYe" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/100005521171731" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/5480886/sketchk" target="_blank" title="StackOverFlow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                  StackOverFlow
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.freecodecamp.com/sketchk" target="_blank" title="FreeCodeCamp">
+                  
+                    <i class="fa fa-fw fa-free-code-camp"></i>
+                  
+                  FreeCodeCamp
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1673935657" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-si-qi-72/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-quora"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.dianqk.org/" title="靛青君" target="_blank">靛青君</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.cee.moe/" title="Cee妹" target="_blank">Cee妹</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://maizee.github.io/" title="VP" target="_blank">VP</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#域名"><span class="nav-number">1.</span> <span class="nav-text">域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GoDaddy-上购买域名"><span class="nav-number">1.1.</span> <span class="nav-text">在 GoDaddy 上购买域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器"><span class="nav-number">2.</span> <span class="nav-text">服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于服务器的几件事"><span class="nav-number">2.1.</span> <span class="nav-text">关于服务器的几件事</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Git"><span class="nav-number">2.2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册-GitHub"><span class="nav-number">2.3.</span> <span class="nav-text">注册 GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启-GitHub-Pages-服务"><span class="nav-number">2.4.</span> <span class="nav-text">开启 GitHub Pages 服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试一下"><span class="nav-number">3.</span> <span class="nav-text">测试一下</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SketchK</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("85wNtl2CDolbFjdPaFK9NyOp-gzGzoHsz", "COSG9ew1WcWYxFMm01vaxzSu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

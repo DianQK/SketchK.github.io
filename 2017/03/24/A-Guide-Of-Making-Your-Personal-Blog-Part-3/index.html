@@ -1,0 +1,1355 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="MfNxc_no8WBSrR5-nctOuC5mwnz2a4enrKi9AUb2DvU" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Source Sans Pro bold:300,300italic,400,400italic,700,700italic|Open Sans bold:300,300italic,400,400italic,700,700italic|Open Sans:300,300italic,400,400italic,700,700italic|Source Sans Pro bold:300,300italic,400,400italic,700,700italic|Space Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Blog,Hexo,Next,Travis CI,Domain,GitHub Pages," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="SketchK's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在这篇文章里我们会说说域名解析的话题。不过这次我们会先进行具体的操作，再解释这些操作背后的含义。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Guide Of Making Your Personal Blog - Part 3">
+<meta property="og:url" content="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/index.html">
+<meta property="og:site_name" content="SketchK's Blog">
+<meta property="og:description" content="在这篇文章里我们会说说域名解析的话题。不过这次我们会先进行具体的操作，再解释这些操作背后的含义。">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-155949.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080220.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080419.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-043736.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-043807.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-083908.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-184640.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-07-124910.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080419.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-052804.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-072213.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-Jietu20170308-152333.jpg">
+<meta property="og:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-072514.jpg">
+<meta property="og:updated_time" content="2017-03-26T13:20:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Guide Of Making Your Personal Blog - Part 3">
+<meta name="twitter:description" content="在这篇文章里我们会说说域名解析的话题。不过这次我们会先进行具体的操作，再解释这些操作背后的含义。">
+<meta name="twitter:image" content="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-155949.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/"/>
+
+
+
+
+
+  <title> A Guide Of Making Your Personal Blog - Part 3 | SketchK's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-94029608-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b07ee1cf0a99dfb6056d7888e386b323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SketchK's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SketchK">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SketchK's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                A Guide Of Making Your Personal Blog - Part 3
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T23:42:18+08:00">
+                2017-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/" itemprop="url" rel="index">
+                    <span itemprop="name">DIY</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/" class="leancloud_visitors" data-flag-title="A Guide Of Making Your Personal Blog - Part 3">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在这篇文章里我们会说说域名解析的话题。不过这次我们会先进行具体的操作，再解释这些操作背后的含义。</p>
+<a id="more"></a>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>估计你已经十分讨厌我每次在开干前的废话，所以我决定这次咱们先开干！走起</p>
+<h3 id="在-DNSPods上进行操作"><a href="#在-DNSPods上进行操作" class="headerlink" title="在 DNSPods上进行操作"></a>在 DNSPods上进行操作</h3><ul>
+<li>登录 <code>DNSPods</code> 官网： <a href="https://www.dnspod.cn/" target="_blank" rel="external">https://www.dnspod.cn/</a></li>
+<li>注册 <code>DNSPods</code> 账户，这一步咱就不废话了</li>
+<li>注册成功后，用用户名登录，点击左边的“域名解析”, 然后点击“添加域名”, 点击域名添加以下两个记录. 另外 <code>name.github.io</code> 中的 <code>name</code> 是你 <code>GitHub</code> 的用户名。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>线路类型</th>
+<th>记录值</th>
+<th>MX优先级</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@</td>
+<td>CNAME</td>
+<td>默认</td>
+<td>name.github.io.</td>
+<td>无输入值</td>
+<td>10</td>
+</tr>
+<tr>
+<td>www</td>
+<td>CNAME</td>
+<td>默认</td>
+<td>name.github.io.</td>
+<td>无输入值</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="在-GoDaddy-上进行操作"><a href="#在-GoDaddy-上进行操作" class="headerlink" title="在 GoDaddy 上进行操作"></a>在 GoDaddy 上进行操作</h3><ul>
+<li>登录 <code>GoDaddy</code> 的账户，点击自己账户里的 <code>My Products</code> 选项。</li>
+<li>在弹出的界面里面选择 <code>Domains</code> 一行的 <code>Manage</code> 按钮</li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-155949.jpg" alt=""></p>
+<ul>
+<li>点击左边卡片中右上角的齿轮按钮，然后再点击 <code>Manage DNS</code> 按钮</li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080220.jpg" alt=""></p>
+<ul>
+<li>在 <code>Nameservers</code> 卡片中修改 <code>NameServe</code> 为 <code>f1g1ns1.dnspod.net</code>, <code>f1g1ns2.dnspod.net</code></li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080419.jpg" alt=""></p>
+<h3 id="在-GitHub-上进行操作"><a href="#在-GitHub-上进行操作" class="headerlink" title="在 GitHub 上进行操作"></a>在 GitHub 上进行操作</h3><ul>
+<li>打开我们在 <code>GitHub</code> 上的仓库，点击 <code>Settings</code> 按钮</li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-043736.jpg" alt=""></p>
+<ul>
+<li>在 <code>GitHub Pages</code> 的选项卡中的 <code>Custom domain</code> 中填写你自己购买的域名</li>
+</ul>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-043807.jpg" alt=""></p>
+<h2 id="测试一下"><a href="#测试一下" class="headerlink" title="测试一下"></a>测试一下</h2><p>好了，现在所有的操作都做完了，在浏览器里输入一下你自己购买的域名吧，那个熟悉的页面又出现了，只是这次的网址变成了你之前购买的域名。</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-083908.jpg" alt=""></p>
+<h2 id="我们都干了些什么？"><a href="#我们都干了些什么？" class="headerlink" title="我们都干了些什么？"></a>我们都干了些什么？</h2><p>不过，你明白刚才做的这些事情都代表什么意思么？如果出了问题应该去寻找那方面的资料呢？是不是感觉有点不知所措。所以我们还是静下心来看看我们这些操作到底都代表着什么意思。</p>
+<h3 id="解释下在-DNSPods-里的操作"><a href="#解释下在-DNSPods-里的操作" class="headerlink" title="解释下在 DNSPods 里的操作"></a>解释下在 DNSPods 里的操作</h3><p>首先，我们注册了一个 <code>DNSPods</code> 账号，并做了一些操作。</p>
+<p>在解释这些操作之前，我们得先说明一下 <code>DNS</code> 和 <code>DNSPods</code>。</p>
+<p><code>DNS</code> 的全称是 <code>Domain Name System</code>，所以通过字面就可以理解出它其实是一个域名解析系统，用于解析域名对应的服务器。</p>
+<p><code>DNSPods</code> 是一个提供 <code>DNS</code> 服务的公司。当然还有其他提供 <code>DNS</code> 服务的公司，如果你想用别的也完全 OK。</p>
+<p>我们在 <code>DNSPods</code> 里面进行域名解析的时候到底又做了哪些工作呢？让我们重新看下刚才填写的表格：</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-184640.jpg" alt=""></p>
+<p>这里面的名词包括，主机记录，记录类型，线路类型，记录值，权重，MX 优先级，TTL ，它们分别代表着什么意思呢，我们来一个个解释。</p>
+<ul>
+<li>主机记录用于设置域名的前缀，用于告诉 <code>DNS</code> 服务器把 “域名前缀 + 域名” 的链接与记录值中的地址关联到一起，例如我们在主机记录里输入 <code>www</code> ，记录值里输入 <code>baidu.com</code> ，就代表我们把 <code>www.sketchk.xyz</code> 与 <code>www.baidu.com</code> 关联到一起。当然不同的前缀有不同的意思，常见的有：<ul>
+<li><code>www</code>：表示解析域名 <code>www.skethck.xyz</code> </li>
+<li><code>@</code>：表示解析主域名 <code>sketchk.xyz</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>记录值是用来填完我们购买的域名地址或者服务器的 <code>IP</code> 地址。<ul>
+<li>如果我们在记录类型里选择了 <code>A</code> 记录就在记录值里填写服务器的 <code>IP</code>。</li>
+<li>如果我们在记录类型里选择了 <code>CNAME</code> 记录就在记录值里填写我们购买的域名。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>记录类型是用于区分记录值的类型，不同的记录类型要填写不同样式的记录值</p>
+</li>
+<li><p>线路类型是说我们让哪些线路的用户可以访问这个域名。举个例子，如果我们指定了电信用户，那么联通用户就无法访问我们这个域名，通常我们选默认就好。</p>
+</li>
+<li><p>TTL 是 Time To Live 的缩写，它表示一条域名解析记录在 <code>DNS</code> 服务器中的存留时间，单位是秒，所以 600 是表示 10 分钟的意思。</p>
+</li>
+<li><p>权重和 MX 优先级 跟我们做博客这件事没有太大关系，就不废话了</p>
+</li>
+</ul>
+<p>在这里估计有人会问，我们使用的是 <code>GitHub Pages</code> 服务，并没有实际去购买一个服务器，那么我们怎么去获得这个 <code>IP</code> 地址呢？ 其实在 <code>GitHub</code> 的官网上就有解释，具体详情请点击<a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="external">这里</a>。</p>
+<p>如果你仔细读了 <code>Customizing GitHub Pages</code> 的这篇<a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank" rel="external">文档</a>，就会发现 <code>GitHub</code> 推荐在 <code>DNS</code> 里面使用 <code>A</code> 记录和 <code>CNAME</code> 结合的方式解析，而我在之前使用的是 <code>CNAME</code> 记录的方式，那么我们就改一下吧。</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-07-124910.jpg" alt=""></p>
+<h3 id="解释下在-GoDaddy-里的操作"><a href="#解释下在-GoDaddy-里的操作" class="headerlink" title="解释下在 GoDaddy 里的操作"></a>解释下在 GoDaddy 里的操作</h3><p>现在把我们在 <code>DNSPods</code> 里面干的事情算是搞明白了，我们是告诉了 <code>DNS</code> 服务器应该如何解析我们购买的域名，那么下一步就是告诉我们的域名在解析的时候去找刚才配置过的 <code>DNS</code> 服务器。</p>
+<p>好了，让我们回顾下刚才填写的内容。</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080419.jpg" alt=""></p>
+<p>估计有些好奇的小伙伴一定会好奇，为什么我们要填写 <code>f1g1ns1.dnspod.net</code>, <code>f1g1ns2.dnspod.net</code>，而不是其他的值，原因很简单，<code>DNSPods</code> 在它的使用手册里面说明了它们的地址就是这样的。如果有任何疑问可以看它们提供的<a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="external">帮助文档</a>。</p>
+<p>所以如果你没有使用 <code>DNSPods</code> 作为你的 <code>DNS</code> 服务商，只需要找到对应的地址并填写到 <code>Nameservers</code> 里面即可。</p>
+<h3 id="解释下在-GitHub-里的操作"><a href="#解释下在-GitHub-里的操作" class="headerlink" title="解释下在 GitHub 里的操作"></a>解释下在 GitHub 里的操作</h3><p>回顾下我们前面做的事，我们在 <code>DNSPods</code> 里面给出了域名和服务器的映射关系，然后我们告诉了域名商在解析时候去 <code>DNSPods</code> 里进行解析，这样它们就可以找到对应的服务器 <code>IP</code> 地址了，用一个流程图来表示的话，就是下面的样子：</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-052804.jpg" alt=""></p>
+<blockquote>
+<p>如果你对上面这幅图有疑问，可以在终端里面输入 <code>dig sketchk.xyz</code> ，<code>dig www.sketchk.xyz</code>，<code>dig github.sketchk.io</code> 来查看具体信息</p>
+</blockquote>
+<p>这一切看起来都能解释清楚，但我们想想 <code>Github</code> 的服务器上不光有 <code>sketchk.github.io</code> 的仓库，也可能有 <code>abc.github.io</code> 的仓库, 还会有 Pop , AsyncDisplayKit 等一堆第三方仓库，那当我们通过自定义域名（例如 <code>sketchk.xyz</code>）找到这台服务器的时候，服务器是怎么把正确的资源返回给我们的呢？</p>
+<p>如果你不太明白我在说什么的话，请回顾 <code>在 GitHub 上进行操作</code> 一节的内容并删除 <code>Custom Domain</code> 中的内容，然后你再访问下自己购买的域名？ 是不是 404 了！ 但如果你访问 <code>GitHub</code> 自动分配的那个域名（例如给我分配的 <code>sketchk.github.io</code>），你会发现一切正常。是不是很有意思？</p>
+<p>所以我们需要确定一个 <code>GitHub</code> 和 自定义域名的对应关系，这样当你访问 <code>GitHub</code> 的服务器的时候，<code>GitHub</code> 就知道应该返回给你什么样子的资源了。</p>
+<p>心细的朋友可能会问，这个对应关系到底是怎么进行的呢？ 我自己做了一个实验，将 <code>Custom Domain</code> 改为了 <code>sketchktestforfun.xyz</code>, 此时无论你访问 <code>sketchktestforfun.xyz</code> 还是 <code>sketchk.xyz</code> 都会发现网站无法正常展示。</p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-072213.jpg" alt=""></p>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-Jietu20170308-152333.jpg" alt=""></p>
+<p>不过我们可以尝试用下面的方式来访问域名，比如把请求的 <code>Host</code> 改为 <code>sketchktestforfun.xyz</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl -v sketchk.xyz -H <span class="string">'Host: sketchktestforfun.xyz'</span></div></pre></td></tr></table></figure>
+<p><img src="http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-072514.jpg" alt=""></p>
+<p>通过上面这个图，我们发现使用 <code>sketchk.xyz</code> 这个域名又可以访问到 <code>sketchk.github.io</code> 的资源了，这说明如果一个域名最终指向 <code>GitHub</code> 的服务器，当我们修改其 Host 为自己的仓库名时，它们最终都会访问到我们自己的那个仓库，这也又一次证明了在 <code>Custom Domain</code> 中填写的内容是为了让服务器知道如何响应不同的网络请求。</p>
+<p>估计这时候一些朋友会惊慌失措的说道：“如果我在 <code>Custom Domain</code> 里填写的域名跟人重复了的话，该怎么办？” </p>
+<p>对于这个问题，我们必须先搞清楚一件事，就是你在购买域名的时候，域名商一定不会卖给你一个已经被人买走的域名，Don’t panic！</p>
+<p>这里还有一些朋友会说我在一些文章里面看到的操作不是这样的，他们都是在对应的仓库里面添加了一个 <code>CNAME</code> 文件并在里面写上自己购买的域名。</p>
+<p>其实吧，这两种做法是一样的，只不过 <code>GitHub</code> 以前没有提供这样一个简便的操作，所以之前的人会用创建 <code>CNAME</code> 的方式完成这个对应关系，但现在 <code>GitHub</code> 提供了这个功能，咱就怎么简单怎么来吧！</p>
+<p>好了，终于把这一章的内容写完了，让我们休息一下，开始下一章的内容吧！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      SketchK
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/" title="A Guide Of Making Your Personal Blog - Part 3">http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Next/" rel="tag"># Next</a>
+          
+            <a href="/tags/Travis-CI/" rel="tag"># Travis CI</a>
+          
+            <a href="/tags/Domain/" rel="tag"># Domain</a>
+          
+            <a href="/tags/GitHub-Pages/" rel="tag"># GitHub Pages</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/" rel="next" title="A Guide Of Making Your Personal Blog - Part 2">
+                <i class="fa fa-chevron-left"></i> A Guide Of Making Your Personal Blog - Part 2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-4/" rel="prev" title="A Guide Of Making Your Personal Blog - Part 4">
+                A Guide Of Making Your Personal Blog - Part 4 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzgxNS80Mzkx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SketchK" />
+          <p class="site-author-name" itemprop="name">SketchK</p>
+           
+              <p class="site-description motion-element" itemprop="description">Do One Thing And Do It Well</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SketchK" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/SketchK_QiYe" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/100005521171731" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://stackoverflow.com/users/5480886/sketchk" target="_blank" title="StackOverFlow">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                  StackOverFlow
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.freecodecamp.com/sketchk" target="_blank" title="FreeCodeCamp">
+                  
+                    <i class="fa fa-fw fa-free-code-camp"></i>
+                  
+                  FreeCodeCamp
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1673935657" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-si-qi-72/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-quora"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.dianqk.org/" title="靛青君" target="_blank">靛青君</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.cee.moe/" title="Cee妹" target="_blank">Cee妹</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://maizee.github.io/" title="VP" target="_blank">VP</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#域名解析"><span class="nav-number">1.</span> <span class="nav-text">域名解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-DNSPods上进行操作"><span class="nav-number">1.1.</span> <span class="nav-text">在 DNSPods上进行操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GoDaddy-上进行操作"><span class="nav-number">1.2.</span> <span class="nav-text">在 GoDaddy 上进行操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GitHub-上进行操作"><span class="nav-number">1.3.</span> <span class="nav-text">在 GitHub 上进行操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试一下"><span class="nav-number">2.</span> <span class="nav-text">测试一下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我们都干了些什么？"><span class="nav-number">3.</span> <span class="nav-text">我们都干了些什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解释下在-DNSPods-里的操作"><span class="nav-number">3.1.</span> <span class="nav-text">解释下在 DNSPods 里的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释下在-GoDaddy-里的操作"><span class="nav-number">3.2.</span> <span class="nav-text">解释下在 GoDaddy 里的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释下在-GitHub-里的操作"><span class="nav-number">3.3.</span> <span class="nav-text">解释下在 GitHub 里的操作</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SketchK</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("85wNtl2CDolbFjdPaFK9NyOp-gzGzoHsz", "COSG9ew1WcWYxFMm01vaxzSu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
