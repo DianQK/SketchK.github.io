@@ -4,7 +4,7 @@
 
 This is a blog created by SketchK and available on [www.sketchk.xyz](www.sketchk.xyz) now.
 
-Now you are on **blog-source branch**.
+Now you are on **master branch**.
 
 ## About Me 
 
@@ -12,7 +12,7 @@ I'm Zhang Siqi and I'm a developer focusing on Objective C, Swift (Cocoa and Coc
 
 If you're interested in my complete resume have a look at my [Linkedin Profile](https://www.linkedin.com/in/zhang-siqi-b430b159/).
 
-You can follow me on twitter [@SketchK_QiYe](https://twitter.com/SketchK_QiYe) and if you feel the inexplicable desire to write me... by all means, do it, My Email is [zhangsiqi1988@gmail.com](zhangsiqi1988@gmail.com)!
+You can follow me on twitter [@SketchK_QiYe](https://twitter.com/SketchK_QiYe) and if you feel the inexplicable desire to write me... by all means, do it, My Email is [zhangsiqi1988@gmail.com](mailto:zhangsiqi1988@gmail.com)!
 
 ## About Blog
 
