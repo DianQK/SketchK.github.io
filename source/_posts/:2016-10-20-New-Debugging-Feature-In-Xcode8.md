@@ -512,3 +512,7 @@ PS: 如果你比较懒的话, 好好想想 `dispatch_async` 用的对么? 如果
 [WWDC 2016 Session 412 - Thread Sanitizer and Static Analysis](https://developer.apple.com/videos/play/wwdc2016/412/)
 
 [WWDC 2015 Session 413 - Advanced Debugging and the Address Sanitizer](https://developer.apple.com/videos/play/wwdc2015/413/)
+
+
+## Demo Code
+示例代码可以在[这里](https://github.com/SketchK/SketchK.github.io/tree/blog-code/2016-10-20-NewDebuggingFeatureInXcode8)获得。
