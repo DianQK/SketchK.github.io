@@ -116,6 +116,8 @@ $ git push -u origin blog-source
 
 所以把 `next` 文件夹下的 `.git` 文件删除，重新进行一次提交。
 
+> 如果在切换分支的时候留下来 master 分支的无用文件，可以直接删除。
+
 ## 配置 Travis CI
 
 ### 开启仓库的 Travis CI 功能

@@ -120,12 +120,13 @@ OK，废话就此结束了，准备实战！
 
 ### 安装 Git
 
-> 如果你已经安装过 `Git` 了，那就跳过这一节吧！
-
 * 登录 `Git` 的官网：[https://git-scm.com/](https://git-scm.com/)
 * 点击右边的 `DownLoads For Mac` 按钮
 
+> 当然也可以用 [`brew`]命令(https://brew.sh/) 来安装 `Git`, 这里为了减少学习成本就不说  ` homebrew` 了，好奇的同学可以自己尝试
+
 ![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-053621.jpg)
+
 
 后面的事，咱就不用废话了。记住，安装完以后，在 terminal 上输入 `git --version` 来查看 Git 版本，只有安装成功才会显示出你的 Git 版本，所以你也可以通过这个方式来确认自己是否安装成功！
 
