@@ -2,7 +2,7 @@
 title: A Guide Of Making Your Personal Blog - Part 5
 comments: true
 date: 2017-03-24 23:42:29
-updated:
+updated: 2017-04-03 22:24:29
 tags:
 	- Blog
 	- Next
@@ -119,7 +119,7 @@ favicon: /YourIcoPath
 
 如果没有看到，请不要着急，等上一会再看看，如果还是不行的话，请查看一下图片的路径和文件的格式是否有误。
 
-另外需要补充的一点是 `favicon` 支持的图片格式有 `ico`，`png` 和 `gif`, 至于图片的大小一般是 `16 * 16` 或者 `32 * 32`, 详细信息可以查看 W3C 的[文档](https://www.w3.org/2005/10/howto-favicon)
+另外需要补充的一点是 `favicon` 支持的图片格式有 `ico`，`png` 和 `gif`, 至于图片的大小一般是 `16 * 16` 或者 `32 * 32`, 详细信息可以查看 W3C 的[文档](https://www.w3.org/2005/10/howto-favicon)。
 
 ### sitemap 设置和蜘蛛协议
 

@@ -2,7 +2,7 @@
 title: A Guide Of Making Your Personal Blog - Part 6
 comments: true
 date: 2017-03-24 23:42:33
-updated:
+updated: 2017-04-03 22:24:29
 tags:
 	- Blog
 	- Travis CI

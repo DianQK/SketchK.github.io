@@ -2,7 +2,7 @@
 title: A Guide Of Making Your Personal Blog - Part 2
 comments: true
 date: 2017-03-24 23:41:59
-updated:
+updated: 2017-04-03 22:24:29
 tags:
 	- Blog
 	- Domain
@@ -123,7 +123,7 @@ OK，废话就此结束了，准备实战！
 * 登录 `Git` 的官网：[https://git-scm.com/](https://git-scm.com/)
 * 点击右边的 `DownLoads For Mac` 按钮
 
-> 当然也可以用 [`brew`]命令(https://brew.sh/) 来安装 `Git`, 这里为了减少学习成本就不说  ` homebrew` 了，好奇的同学可以自己尝试
+> 当然也可以用 [`brew`](https://brew.sh/) 命令来安装 `Git`, 这里为了减少学习成本就不说  ` homebrew` 了，好奇的同学可以自己尝试
 
 ![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-053621.jpg)
 
