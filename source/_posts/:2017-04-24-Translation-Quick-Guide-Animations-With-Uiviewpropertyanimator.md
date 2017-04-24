@@ -1,5 +1,5 @@
 ---
-title: 'Translation - Quick Guide: Animations With Uiviewpropertyanimator '
+title: '【翻译】- Quick Guide: Animations With Uiviewpropertyanimator '
 comments: true
 date: 2017-04-24 17:25:29
 updated:
