@@ -5,12 +5,11 @@ date: 2018-02-23 12:44:58
 updated:
 tags:
 	- iOS
-	- UI
+	- UIKit
 categories:
 	- iOS
----
 
-在 iOS 11 之后，Apple 在导航栏中启用了自动布局的相关特性，这使得导航栏的使用方式发生了一些变化，今天我们着重说说导航栏中 UIBarButtonItem 在 iOS 11 中的几点变化。
+---
 
 <!-- more -->
 

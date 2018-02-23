@@ -4,14 +4,12 @@ comments: true
 date: 2016-10-20 17:37:32
 updated:
 tags:
-	- iOS
+	- WWDC
 	- Xcode
-	- Debug
 categories:
-	- iOS
----
+	- Xcode
 
-把最近学习的两个关于 debug 的 WWDC 跟大家分享下 : ]
+---
 
 <!-- more -->
 

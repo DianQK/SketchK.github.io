@@ -5,15 +5,10 @@ date: 2017-03-24 23:41:59
 updated: 2017-04-03 22:24:29
 tags:
 	- Blog
-	- Domain
-	- GitHub Pages
 categories:
 	- DIY
-	- Blog
-	
----
 
-这篇文章会围绕域名和服务器的话题展开，同时也会说点关于 `Git` 的话题。
+---
 
 <!-- more -->
 

@@ -7,14 +7,11 @@ tags:
 	- Translation
 	- Swift
 categories:
-	- Translation
+	- Swift
 
 ---
 
-这是在 SwiftGG 翻译组翻译的一篇文章， 你也可以在 SwiftGG 官网上查看
-
 <!-- more -->
-
 时尚日志，由你做主
 
 自从 Swift 的 beta 版本诞生后，社区里那些富有探索精神的开发者就迫不及待地在 Swift 的学海中遨游，他们不遗余力地去探索 Swift 的潜力，同时交流分享他们从中得到的经验。

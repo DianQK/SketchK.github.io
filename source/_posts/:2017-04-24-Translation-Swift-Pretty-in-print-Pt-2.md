@@ -7,11 +7,9 @@ tags:
 	- Translation
 	- Swift
 categories:
-	- Translation
+	- Swift
 
 ---
-
-这是在 SwiftGG 翻译组翻译的一篇文章， 你也可以在 SwiftGG 官网上查看
 
 <!-- more -->
 

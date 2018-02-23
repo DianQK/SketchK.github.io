@@ -5,12 +5,10 @@ date: 2016-07-26 03:31:27
 updated:
 tags:
 	- iOS 
-	- Personal App
 categories:
 	- iOS
----
 
-说一说我的第一个个人开源作品，它看似一篇技术文章，但也有点像鸡汤...
+---
 
 <!-- more -->
 

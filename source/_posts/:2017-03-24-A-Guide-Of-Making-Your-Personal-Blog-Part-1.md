@@ -7,10 +7,8 @@ tags:
 	- Blog
 categories:
 	- DIY
-	- Blog
----
 
-这篇文章先说说搭建个人博客中常见的基本概念吧。
+---
 
 <!-- more -->
 

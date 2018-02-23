@@ -5,16 +5,10 @@ date: 2017-03-24 23:42:23
 updated:
 tags:
 	- Blog
-	- Hexo
 categories:
-	- DIY
-	- Blog
-	
+	- DIY	
+
 ---
-
-这篇文章主要讨论了博客框架的话题。目前主流的博客框架有 `Jeklly`, `Octopreess` 和 `Hexo`。
-
-选 `Hexo` 的因为它方便实用，至于我是怎么知道的，其实很简单，因为三种方式都试过。
 
 <!-- more -->
 

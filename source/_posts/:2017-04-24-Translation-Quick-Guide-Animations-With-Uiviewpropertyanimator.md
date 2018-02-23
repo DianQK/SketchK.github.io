@@ -5,13 +5,12 @@ date: 2017-04-24 17:25:29
 updated:
 tags:
 	- Translation
+	- iOS
 	- Animation
 categories:
-	- Translation
+	- Animation
 
 ---
-
-这是在 SwiftGG 翻译组翻译的一篇文章， 你也可以在 SwiftGG 官网上查看
 
 <!-- more -->
 

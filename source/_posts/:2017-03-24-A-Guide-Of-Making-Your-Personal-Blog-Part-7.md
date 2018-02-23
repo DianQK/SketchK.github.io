@@ -7,11 +7,8 @@ tags:
 	- Blog
 categories:
 	- DIY
-	- Blog
-	
----
 
-终于把教程写完了，现在让我总结一下！
+---
 
 <!-- more -->
 

@@ -4,13 +4,12 @@ comments: true
 date: 2015-07-30 00:12:56
 updated: 2017-03-20 15:12:00
 tags:
-	- iOS 
+	- iOS
+	- UIKit 
 categories:
 	- iOS
 
 ---
-
-让我们深入分析下 resizableImageWithCapInsets: 方法
 
 <!-- more -->
 
