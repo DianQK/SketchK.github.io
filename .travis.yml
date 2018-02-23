@@ -6,9 +6,9 @@ branches:
   only:
   - blog-source
 
-cache:
-  directories:
-  - node_modules
+# cache:
+#   directories:
+#   - node_modules
 
 before_install:
   - export TZ=Asia/Beijing
@@ -23,6 +23,9 @@ before_script:
 
 script:
   - git clone --branch master https://github.com/sketchk/sketchk.github.io.git .deploy/sketchk.github.io
+  - rm -rf node_modules/ && npm install
+  - npm install hexo-fs --save
+  - hexo clean
   - hexo generate
   - cp -R public/* .deploy/sketchk.github.io
   - cd .deploy/sketchk.github.io
