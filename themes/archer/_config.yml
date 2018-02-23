@@ -1,0 +1,82 @@
+# ========== Profile ========== #
+# avatar
+avatar: /images/avatar.png
+# author name
+author: SketchK
+# signature
+signature: Do One Thing And Do It Well
+# SNS
+social:
+  email: zhangsiqi1988@gmail.com
+  github: https://github.com/SketchK
+  weibo: http://weibo.com/u/1673935657
+  zhihu: https://www.zhihu.com/people/zhang-si-qi-72/activities
+  douban:
+  facebook: https://www.facebook.com/100005521171731
+  twitter: https://twitter.com/SketchK_QiYe
+  instagram:
+  stack-overflow: https://stackoverflow.com/users/5480886/sketchk
+  linkedin:
+  others: https://www.freecodecamp.com/sketchk
+  rss: /atom.xml
+# friends
+friends:
+  靛青君: https://blog.dianqk.org/
+  Cee妹: http://blog.cee.moe/
+  VP: https://maizee.github.io/
+  Ming: http://zesming.com/
+  # friendC:
+about:
+  enable: true
+  image: '/intro/about-bg.jpg'
+
+# ========== Site ========== #
+# title of the site
+SEO_title: SketchK's Studio
+# main title
+main_title: SketchK's Studio.
+# subtitle
+subtitle: Keep It Simple And Stupid
+# site haeder image
+site_header_image: '/intro/index-bg.jpg'
+# post haeder image
+post_header_image: '/intro/post-bg.jpg'
+# 404 image
+_404_image: '/intro/404-bg.jpg'
+
+# ========== Comment ========== #
+# Fill in the field to enable the corresponding comment plugin
+# If you want to add other comment plugin, edit in "custom.ejs"
+comment:
+  # Livere  site: https://livere.com/
+  livere_uid: MTAyMC8yNzgxNS80Mzkx
+  # Disqus  site: https://disqus.com/
+  disqus_shortname:
+  # Changyan  site: http://changyan.kuaizhan.com/
+  changyan_appid:
+  changyan_conf:
+  # Gitment  site: https://github.com/imsun/gitment
+  gitment_owner:
+  gitment_repo:
+  gitment_client_id:
+  gitment_client_secret:
+  # Youyan  site: http://www.uyan.cc/
+  youyan_uid:
+
+# ========== Analytics ========== #
+# Busuanzi pv analytics
+busuanzi: true
+# Baidu analytics
+baidu_analytics: b07ee1cf0a99dfb6056d7888e386b323
+# Google analytics
+google_analytics: UA-94029608-1
+# CNZZ analytics
+CNZZ_analytics:
+
+# ========== Others ========== #
+# favicon
+favicon: /images/favicon.png
+# truncate length (the default is 300. If it's set to 0, there will not be abstruct)
+truncate_length: 150
+# enable toc
+toc: true
