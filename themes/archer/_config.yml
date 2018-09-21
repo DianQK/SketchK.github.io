@@ -9,27 +9,26 @@ signature: Do One Thing And Do It Well
 social:
   email: zhangsiqi1988@gmail.com
   github: https://github.com/SketchK
-  weibo: http://weibo.com/u/1673935657
-  zhihu: https://www.zhihu.com/people/zhang-si-qi-72/activities
-  douban:
-  facebook: https://www.facebook.com/100005521171731
   twitter: https://twitter.com/SketchK_QiYe
+  weibo: http://weibo.com/u/1673935657
+  zhihu: 
+  douban:
+  facebook: 
   instagram:
-  stack-overflow: https://stackoverflow.com/users/5480886/sketchk
+  stack-overflow: 
   linkedin:
-  others: https://www.freecodecamp.com/sketchk
   rss: /atom.xml
 # friends
 friends:
   靛青君: https://blog.dianqk.org/
   Cee妹: http://blog.cee.moe/
-  VP: https://maizee.github.io/
   Sai姐: http://saitjr.com
+  羊神: https://www.sunnyyoung.net/
   瓜瓜: https://www.desgard.com/
   Ming: http://zesming.com/
+  VP: https://maizee.github.io/
+  水水: http://yousanflics.com.cn
   御姐: http://forelax.space/
-  羊神: https://www.sunnyyoung.net/
-  
   # friendC:
 about:
   enable: true
