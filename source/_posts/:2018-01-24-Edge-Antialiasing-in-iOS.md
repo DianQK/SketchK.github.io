@@ -21,18 +21,19 @@ categories:
 
 以下面的例子为例，左侧为非抗锯齿视图，右侧为抗锯齿视图：
 
-![1](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-4850DAAE27F3807EB2FFF6340487F647.jpg)
+![01](01.jpg)
 
 锯齿现象的细节
 
-![2](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-16485B417F0F05A9D45ABA1C0854A61D.jpg)
+![02](02.jpg)
 
 ## 开启抗锯齿功能
 当锯齿现象是由于 UI 控件自身引起的时候，例如旋转，形变等，我们就可以使用iOS 自带的抗锯齿功能来解决这一问题。
 
 如果想开启全局抗锯齿的话，可以在 info.plist 中加入以下 key-value。
 
-![3](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-493AA5DF5F9ED8B3C4BB3FD29CCD0F60.jpg)
+![03](03.jpg)
+
 
 但由于该功能会造成性能上的损耗，苹果官方并不推荐使用这种全局开启的方式，我们只需要对特定的视图开启即可
 
@@ -47,7 +48,7 @@ layer.allowsEdgeAntialiasing = YES
 
 我们看一下使用该方法处理后的效果图
 
-![4](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-844AE7AA138B9F95336E532A92A3C81B.jpg)
+![04](04.jpg)
 
 代码实现起来较为简单，可以写成 UIImage 的 Category 方法，示例代码如下
 
@@ -79,19 +80,20 @@ layer.allowsEdgeAntialiasing = YES
 ## 案例分析
 近日，有部分同事反馈首页浮动弹框图片的锯齿现象比较严重，希望我们能改进，我们看一下原始效果:
 
-![5](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-C19D67D2706529B4034A43FA2A41F30D.gif)
+![05](05.gif)
 
 根据当前的使用场景，我们应该使用方案二进行处理，效果如下：
 
 动态效果图
-![6](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-EFDD1D177288389CE5B344F2C02E2DDE.gif)
+![06](06.gif)
+
 
 静态效果图
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-119E47209E8748886941BFB7716C586D.jpg)
+![07](07.jpg)
 
 乍一看，似乎没有任何改变，让我们把图片放大来看看细节
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-E39FF61DB23148ADC54E7468DECCA061.png)
+![08](08.png)
 
 我们发现使用方案二确实生效了，而且在锯齿边缘产生了新的像素点，但方案受限于图片自身大小和分辨率的问题，导致效果不够明显。
 

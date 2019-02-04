@@ -12,7 +12,7 @@ categories:
 
 <!-- more -->
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+![01](01.png)
 
 A Guide Of Making Your Personal Blog 系列
 

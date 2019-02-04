@@ -12,7 +12,7 @@ categories:
 
 <!-- more -->
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+![01](01.png)
 
 **A Guide Of Making Your Personal Blog 系列**
 
@@ -68,7 +68,7 @@ INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
 
 此时即可使用浏览器访问 [`http://localhost:4000`](http://localhost:4000)，检查站点是否正确运行。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-16-111534.jpg)
+![02](02.jpg)
 
 
 ## 一些说明文档上没有说的事儿
@@ -101,7 +101,7 @@ menu:
 
 先说说什么是 `favicon` 图标，看到下图左边蓝色的 `logo` 了么，它就是 `favicon` 图标。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-20-102043.jpg)
+![03](03.jpg)
 
 制作这个东西很简单，将你喜欢的图片放到 [RealFaviconGenerator](http://realfavicongenerator.net/) 网站中进行转换，然后把获得的 `ico` 文件放到 `source` 文件夹中
 
@@ -140,11 +140,11 @@ favicon: /YourIcoPath
 4. 重新生成博客文件，并确认 `public` 文件夹下是否多出一个 `sitemap.xml` 文件
 5. 在 Google 的 `Search Console` 里填写 `sitemap` 地址，看看是否检测成功
 
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-20-114421.jpg)
+	![04](04.jpg)
 
 6. 大概过几分钟，在 `Google` 的搜索栏里输入 `site:YourDomain`,例如我的就是`site:sketchk.xyz`, 如果能够像下图一样展示出你的网站，那么就说明你的网站已经被正确收录了。
 
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-20-114743.jpg)
+	![05](05.jpg)
 
 弄完了 `sitemap` 的设置，我们来说说蜘蛛协议。
 

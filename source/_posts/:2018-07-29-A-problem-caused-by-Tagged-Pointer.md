@@ -50,7 +50,7 @@ categories:
 
 所以 Apple 将一个对象的指针拆成两部分，一部分直接保存数据，另一部分作为特殊标记，表示这是一个特别的指针，不指向任何一个地址。所以，引入了 Tagged Pointer 对象之后，64 位 CPU 下 NSNumber 的内存图变成了以下这样：
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-07-29-ADE74FB2EAE529C9EC54BD3741B92959.jpg)
+![01](01.jpg)
 
 对此，我们也可以用 Xcode 做实验来验证。我们的实验代码如下：
 

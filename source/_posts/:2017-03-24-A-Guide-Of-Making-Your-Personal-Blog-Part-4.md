@@ -12,7 +12,7 @@ categories:
 
 <!-- more -->
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+![01](01.png)
 
 **A Guide Of Making Your Personal Blog 系列**
 
@@ -62,7 +62,7 @@ $ npm install
 
 创建完毕后，你大概会看到这样一个目录结构。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-101403.jpg)
+![02](02.jpg)
 
 >实际生成的目录结构和 Hexo 官网给出的目录结果会有一些出入，不过估计是作者许久没有更新了，总之按照操作来就好。
 
@@ -70,11 +70,11 @@ $ npm install
 
 在站点根目录中，输入`$ hexo server` 后会出现如下的提示
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-105131.jpg)
+![03](03.jpg)
 
 所以让我们在浏览器里面输入一下 `http://localhost:4000/` 吧，然后你看到了什么？
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-105420.jpg)
+![04](04.jpg)
 
 以后我们在实际的使用过程中，每当修改完网站里的东西就可以通过这种方式来预览，而不是直接发布到网上。
 
@@ -84,11 +84,11 @@ $ npm install
 
 我们只需要在站点根目录中输入 `$ hexo generate` 即可，执行完以后大概是下图这个样子。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-111314.jpg)
+![05](05.jpg)
 
 此时，你会发现站点根目录里多了一个 `public` 文件夹，这个文件夹里的东西就是博客的静态文件，所以下一步，不用我说，你也应该知道我们要干什么了吧？
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-111510.jpg)
+![06](06.jpg)
 
 ### 部署我们的博客
 
@@ -119,7 +119,7 @@ $ npm install hexo-deployer-git --save
 
 * 最后，在站点根目录中输入 `$ hexo deploy`
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-113301.jpg)
+![07](07.jpg)
 
 > 眼尖的朋友一定发现，我在终端里面实际输入的是 `hexo d` 而不是 `hexo deploy`, 这是因为 `Hexo` 对这些命令做了优化，大部分命令我们都可以使用简写的方式来执行，例如 `hexo g` 完全等同与 `hexo generate`，是不是对 `Hexo` 又产生了一点好感呢？
 
@@ -131,7 +131,7 @@ $ npm install hexo-deployer-git --save
 
 是不是知道原理以后，出现这些问题也不会怕怕了，现在我们赶紧填写好 `Custom Domain` 吧，然后再次在浏览器里输入购买的域名！ 嘿嘿嘿！
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-114615.jpg)
+![08](08.jpg)
 
 恭喜你！你的个人博客终于有个雏形了！
 
@@ -174,7 +174,7 @@ $ git push origin master
 
 > 不用纠结你终端里面展示的内容和我的不太一样，重要的是最后的那句 **Everything up-to-date**。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-09-060814.jpg)
+![09](09.jpg)
 
 我说过凡事还是要搞明白，要不以后出问题都不知道该怎么办，所以各位还是耐着性子让我把这段 `shell` 脚本解释下。
 
@@ -195,7 +195,7 @@ $ git push origin master
 
 你只需要输入 `hexo new <名称>`， 然后你会发现在 `source/_post/` 里多一个文件，文件名与你输入的 `<名称>` 相同。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-09-075224.jpg)
+![10](10.jpg)
 
 不过，你很快会发现这是一个以 `md` 为后缀名的文件，这说明它是一个支持 `Markdown` 语言的文件，那么什么是 `Markdown` 呢？
 
@@ -212,8 +212,7 @@ $ git push origin master
 
 总之，这些都不重要，哪个看着顺眼就用哪个！
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-09-markdown-syntax-language.png)
-
+![11](11.png)
 
 ### 关于创建文章的一点补充
 

@@ -12,7 +12,7 @@ categories:
 
 <!-- more -->
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+![01](01.png)
 
 **A Guide Of Making Your Personal Blog 系列**
 
@@ -44,31 +44,31 @@ categories:
 * 登录 `GoDaddy` 的账户，点击自己账户里的 `My Products` 选项。
 * 在弹出的界面里面选择 `Domains` 一行的 `Manage` 按钮
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-155949.jpg)
+![02](02.jpg)
 
 * 点击左边卡片中右上角的齿轮按钮，然后再点击 `Manage DNS` 按钮
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080220.jpg)
+![03](03.jpg)
 
 * 在 `Nameservers` 卡片中修改 `NameServe` 为 `f1g1ns1.dnspod.net`, `f1g1ns2.dnspod.net`
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080419.jpg)
+![04](04.jpg)
 
 ### 在 GitHub 上进行操作
 
 * 打开我们在 `GitHub` 上的仓库，点击 `Settings` 按钮
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-043736.jpg)
+![05](05.jpg)
 
 * 在 `GitHub Pages` 的选项卡中的 `Custom domain` 中填写你自己购买的域名
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-043807.jpg)
+![06](06.jpg)
 
 ## 测试一下
 
 好了，现在所有的操作都做完了，在浏览器里输入一下你自己购买的域名吧，那个熟悉的页面又出现了，只是这次的网址变成了你之前购买的域名。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-083908.jpg)
+![07](07.jpg)
 
 ## 我们都干了些什么？
 
@@ -86,7 +86,7 @@ categories:
 
 我们在 `DNSPods` 里面进行域名解析的时候到底又做了哪些工作呢？让我们重新看下刚才填写的表格：
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Jietu20170306-184640.jpg)
+![08](08.jpg)
 
 这里面的名词包括，主机记录，记录类型，线路类型，记录值，权重，MX 优先级，TTL ，它们分别代表着什么意思呢，我们来一个个解释。
 
@@ -112,7 +112,7 @@ categories:
 
 如果你仔细读了 `Customizing GitHub Pages` 的这篇[文档](https://help.github.com/articles/about-supported-custom-domains/)，就会发现 `GitHub` 推荐在 `DNS` 里面使用 `A` 记录和 `CNAME` 结合的方式解析，而我在之前使用的是 `CNAME` 记录的方式，那么我们就改一下吧。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-07-124910.jpg)
+![09](09.jpg)
 
 ### 解释下在 GoDaddy 里的操作
 
@@ -120,7 +120,7 @@ categories:
 
 好了，让我们回顾下刚才填写的内容。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-080419.jpg)
+![10](10.jpg)
 
 估计有些好奇的小伙伴一定会好奇，为什么我们要填写 `f1g1ns1.dnspod.net`, `f1g1ns2.dnspod.net`，而不是其他的值，原因很简单，`DNSPods` 在它的使用手册里面说明了它们的地址就是这样的。如果有任何疑问可以看它们提供的[帮助文档](https://support.dnspod.cn/Kb/showarticle/tsid/42/)。
 
@@ -130,7 +130,7 @@ categories:
 
 回顾下我们前面做的事，我们在 `DNSPods` 里面给出了域名和服务器的映射关系，然后我们告诉了域名商在解析时候去 `DNSPods` 里进行解析，这样它们就可以找到对应的服务器 `IP` 地址了，用一个流程图来表示的话，就是下面的样子：
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-052804.jpg)
+![11](11.jpg)
 
 > 如果你对上面这幅图有疑问，可以在终端里面输入 `dig sketchk.xyz` ，`dig www.sketchk.xyz`，`dig github.sketchk.io` 来查看具体信息
 
@@ -142,9 +142,9 @@ categories:
 
 心细的朋友可能会问，这个对应关系到底是怎么进行的呢？ 我自己做了一个实验，将 `Custom Domain` 改为了 `sketchktestforfun.xyz`, 此时无论你访问 `sketchktestforfun.xyz` 还是 `sketchk.xyz` 都会发现网站无法正常展示。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-072213.jpg)
+![12](12.jpg)
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-Jietu20170308-152333.jpg)
+![13](13.jpg)
 
 不过我们可以尝试用下面的方式来访问域名，比如把请求的 `Host` 改为 `sketchktestforfun.xyz` 
 
@@ -152,7 +152,7 @@ categories:
 $ curl -v sketchk.xyz -H 'Host: sketchktestforfun.xyz'
 ```
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-08-072514.jpg)
+![14](14.jpg)
 
 通过上面这个图，我们发现使用 `sketchk.xyz` 这个域名又可以访问到 `sketchk.github.io` 的资源了，这说明如果一个域名最终指向 `GitHub` 的服务器，当我们修改其 Host 为自己的仓库名时，它们最终都会访问到我们自己的那个仓库，这也又一次证明了在 `Custom Domain` 中填写的内容是为了让服务器知道如何响应不同的网络请求。
 

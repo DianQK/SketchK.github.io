@@ -25,7 +25,7 @@ categories:
 但在实际使用过程中,我发现自己对该方法的理解不够深入,所以今天特地编写了一些代码来探析该方法!
 好了,废话不多说,下面我们就开始探析该方法的奥妙吧!
 
-##方法介绍和说明
+## 方法介绍和说明
 
 ```objc
     - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets resizingMode:(UIImageResizingMode)resizingMode
@@ -40,28 +40,28 @@ categories:
     //UIImageResizingModeStretch,  拉伸
 ```
 
-![图2.1 capInsets 参数示意图.png](http://upload-images.jianshu.io/upload_images/406302-97d6960fd2294e17.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![01](01.png)
 
 ## 设计实验方法
 
-###实验对象
+### 实验对象
 * Image对象尺寸为60`*`128(为行文方便,之后简称为原始图像,图3.1)
 * ImageView对象尺寸为180`*`384(为行文方便,之后简称为相框)
 
-![图3.1 原始图像.png](http://upload-images.jianshu.io/upload_images/406302-f8be96709d90f10a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![02](02.png)
 
-###实验方法
+### 实验方法
 1. 对原始图像使用拉伸方法并输入不同的参数
 2. 将拉伸后的图像放入相框,观察其拉伸效果
 
-###测试软件的界面设计
+### 测试软件的界面设计
 界面设计如图3.2
 
 * 正上方为原始图像窗口,用于显示原始图像的效果
 * 左下方为测试图像窗口,用于显示测试状况的效果
 * 右下方为对比图像窗口,用于显示默认状况的效果
 
-![图3.2 测试软件的界面设计.png](http://upload-images.jianshu.io/upload_images/406302-72bf074747c7a491.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![03](03.png)
 
 ## 实验分析
 
@@ -76,7 +76,7 @@ resizingMode参数为UIImageResizingModeStretch
 
 **在之后的实验中,我们将该种状况当做参考对象,显示在界面的右下角**
 
-![图4.1.1 测试结果1.png](http://upload-images.jianshu.io/upload_images/406302-553c751be57b23e8.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![04](04.png)
 
 #### capInsets参数为UIEdgeInsetsMake(42, 0, 0, 0)时
 
@@ -87,7 +87,7 @@ resizingMode参数为UIImageResizingModeStretch
 * 原始图像中受保护的区域(即红色方块区域)在Y轴方向保持了原比例,但在X轴方向进行了拉伸
 * 原始图像中未受保护的区域,直接按比例进行了拉伸
 
-![图4.1.2 测试结果2.png](http://upload-images.jianshu.io/upload_images/406302-f62f15b275831931.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![05](05.png)
 
 #### capInsets参数为UIEdgeInsetsMake(0,20, 0, 0)时 
 
@@ -98,7 +98,7 @@ resizingMode参数为UIImageResizingModeStretch
 * 原始图像中受保护的区域(即红色方块区域)在X轴方向保持了原比例,但在Y轴方向进行了拉伸
 * 原始图像中未受保护的区域,直接按比例进行了拉伸
 
-![图4.1.3 测试结果3.png](http://upload-images.jianshu.io/upload_images/406302-69218879c2013c9d.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![06](06.png)
 
 #### capInsets参数为UIEdgeInsetsMake(42, 20, 42, 20)时
 
@@ -110,7 +110,7 @@ resizingMode参数为UIImageResizingModeStretch
 * 在Y轴上,由于1被左边和上边的设置保护,7被左边和下边的设置保护,所以只能用中间的4来拉伸,同理最底下的3,6,9
 * 由于5没有被保护,所以在整个剩余的空间中,用5进行拉伸填充
 
-![图4.1.4 测试结果4.png](http://upload-images.jianshu.io/upload_images/406302-369b2e1cf801c638.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![07](07.png)
 
 ### 选择平铺模式
 
@@ -123,7 +123,7 @@ resizingMode参数为UIImageResizingModeTile
 
 **在之后的实验中,我们将该种状况当做参考对象,显示在界面的右下角**
 
-![图4.2.1 测试结果1.png](http://upload-images.jianshu.io/upload_images/406302-e1634cd4f03e26d4.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![08](08.png)
 
 #### capInsets参数为UIEdgeInsetsMake(42, 0, 0, 0)时
 当我们向拉伸方法传入该组参数时,代表我们对原始图像上部的三分之一进行保护(即红色方块区域).其平铺效果如图4.2.2
@@ -133,7 +133,7 @@ resizingMode参数为UIImageResizingModeTile
 * 原始图像中受保护的区域(即红色方块区域)在Y轴方向保持了原比例,但在X轴方向进行了平铺填充
 * 原始图像中未受保护的区域,直接按比例进行了平铺,但不包含被保护的区域(注意观察蓝色箭头所指的区域)
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/406302-4070bfdc54fa06cd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![09](09.png)
 
 #### capInsets参数为UIEdgeInsetsMake(0,20, 0, 0)时 
 当我们向拉伸方法传入该组参数时,代表我们对原始图像左部的三分之一进行保护(即红色方块区域).其平铺效果如图4.2.3
@@ -143,7 +143,7 @@ resizingMode参数为UIImageResizingModeTile
 * 原始图像中受保护的区域(即红色方块区域)在X轴方向保持了原比例,但在Y轴方向进行了平铺填充
 * 原始图像中未受保护的区域,直接按比例进行了平铺,但不包含被保护的区域(注意观察蓝色箭头所指的区域)
 
-![图4.2.3 测试结果3.png](http://upload-images.jianshu.io/upload_images/406302-3156e09e8fc1fba8.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![10](10.png)
 
 #### capInsets参数为UIEdgeInsetsMake(42, 20, 42, 20)时
 当我们向拉伸方法传入该组参数时,代表我们对原始图像除数字5以外的区域进行保护(即两个红色方块围起来的区域).其拉伸效果如图4.2.4
@@ -154,7 +154,7 @@ resizingMode参数为UIImageResizingModeTile
 * 在Y轴上,由于1被左边和上边的设置保护,7被左边和下边的设置保护,所以只能用中间的4来平铺,同理最底下的3,6,9
 * 由于5没有被保护,所以在整个剩余的空间中,用5进行平铺填充
 
-![图4.2.4 测试结果4.png](http://upload-images.jianshu.io/upload_images/406302-37c5ce16047b8a0a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240)
+![11](11.png)
 
 ## 结论和建议
 通过8组实验数据可以观察出拉伸方法在平铺模式和拉伸模式下的变化过程和主要区别,由此我们可知:

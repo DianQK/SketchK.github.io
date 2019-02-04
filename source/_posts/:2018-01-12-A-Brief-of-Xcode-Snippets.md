@@ -17,7 +17,7 @@ categories:
 ### 工具位置
 * 编辑器右侧的工具面板, 点击 { } 图标
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-E71384D03B617E090F08A4D4728E596E.jpg)
+![01](01.png)
 
 ### 使用方式
 * 拖拽 代码块
@@ -48,10 +48,10 @@ categories:
 
 ## 自定义代码块
 * 拖拽代码块至 {} 面板即可， 可以参考下图
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-72F4E94F6F23D5966527CD4E03E2D0AB.jpg)
+![02](02.png)
 
 * 用户将自定义的代码块添加到库里面后，可以双击列表中的块去编辑。
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-04FD135B0EA0E89AE98D60351715F5AF.jpg)
+![03](03.jpg)
 
 * 每个块都有以下内容：
     * `Title` 标题 - 代码块的名字（出现在代码补全和代码块库列表中）
@@ -71,7 +71,7 @@ categories:
         * Top Level 最高层
     * 占位符
       * 在 Xcode 中，占位符使用`<#`和`#>`来分隔，中间是占位文本。
-      ![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-BE4E892331C4464EE88CAD2B94163AAD.jpg)
+        ![04](04.jpg)
 
 ## Reference
 * Xcode Snippets: http://nshipster.cn/xcode-snippets/

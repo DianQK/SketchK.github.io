@@ -13,7 +13,7 @@ categories:
 
 <!-- more -->
 
-![](http://upload-images.jianshu.io/upload_images/406302-e82af8ddd45b88f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![01](01.jpg)
 
 ## Overview
 本文针对 WWDC 2016 Session 410 和 412 以及 WWDC 2015 Session 413 中的内容进行了整理.   
@@ -32,7 +32,7 @@ Static Analyzer 是一个常见的 debug 的工具, 苹果工程师在 WWDC 中�
 ### 如何使用 Static Analyzer
 使用 Static Analyzer 很简单, 你可以通过选择 `Product -> Analyze` 或者 `Cmd + Shit + B` 的方式执行, 如果有错误,就会在 Issue Navigator 上显示出来
 
-![](http://upload-images.jianshu.io/upload_images/406302-158702dc7f7ba131.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![02](02.jpg)
 
 在今年的 Session 412 中, Apple 的工程师告诉我们在 Xcode 8 中, Static Analyzer 能够检测出三种新的错误, 它们分别是:
 
@@ -45,28 +45,28 @@ Static Analyzer 是一个常见的 debug 的工具, 苹果工程师在 WWDC 中�
 ### Localizability
 Localizability 其实说的是 Static Analyzer 现在能够检测出本地化信息缺失的问题,目前能够检测出来两种类型的错误, 一种是没有使用 NSLocalizeString 这样的 API, 而直接给控件设置 Sting 的情况, 一种是使用了相应的 API, 但在 comment 信息里面赋值为 nil. 如果有错, 就会像下图一样, 在代码下方出现一个蓝色提示条, 告诉开发者具体的错原因.
 
-![](http://upload-images.jianshu.io/upload_images/406302-c58b5d9a7b6322ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![03](03.jpg)
 
 在 Xcode 里,检测第二种类型的错误并不是默认开启的,如果想开启,需要在BuildSting 中进行如下设置: 
 
-![](http://upload-images.jianshu.io/upload_images/406302-550e697f682e7cee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![04](04.jpg)
 
 ### Instance Cleanup
 Instance Cleanup 说的是什么呢? 
- 
+
 这说的是在 MRC 的代码中, 尤其在 dealloc 中,我们不应该对 assign 类型的属性进行 release 操作,应该对 retain 或者 copy 类型的属性进行 release 操作, 如果不这样操作的话,会引发一些不必要的麻烦. 不过现在有了 Xcode 8, 这些问题就交给 Static Analyzer 吧,它能够很准确的检测出这样的错误.
 
-![](http://upload-images.jianshu.io/upload_images/406302-fa9f60b1b30c5280.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![05](05.jpg)
 
-![](http://upload-images.jianshu.io/upload_images/406302-db5e7986ffee3462.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![06](06.jpg)
 
 Anyway, 还是建议你把代码转成 ARC 吧! 不知道怎么转, 看下图
 
-![](http://upload-images.jianshu.io/upload_images/406302-2473645f7840b0cd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![07](07.jpg)
 
 ### Nullability
 关于这个话题是说的什么呢?  
- 
+
 首先我们得先说说在 2015 年的 WWDC 大会上, Objective-C 引入的一个新特性就叫做 Nullability, 用于表明一个东西到底可以为 nil 还是不可以为 nil , 这和 Swift 里的 option 类型很相似. 既然知道了这个玩意后,我们再说说 Static Analyzer 在这一块到底能够干点什么?   
 
 通俗的说, Static Analyzer 可以检测出在不同场景下是否做到了 nullability 的一致性.   
@@ -89,8 +89,7 @@ Anyway, 还是建议你把代码转成 ARC 吧! 不知道怎么转, 看下图
 
 首先看这段代码, 我们假设他的使用场景如下, 这是一个类似地理位置的抽象类, 对于这样的类,它可以有一个方法来描述它所在的城市或者国家, 这个方法看起来是没有任务错误的, 但其实里面是有缺陷的, 现在假设我们在大西洋的某个不知名的海域中, 由于这个地方既不属于某个城市, 更不属于某个国家, 那么由于 `name` 的初始值为 `nil` , 那么他的返回值一定为 `nil`, 这就与 API 设计者规定的 `nonnull` 相互冲突了, 万幸的是 Static Analyzer 帮我们检测到了这一切. 
 
-
-![](http://upload-images.jianshu.io/upload_images/406302-22dcbaab6ed3535e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![08](08.jpg)
 
 但假如我们没有使用 nonnull 关键字呢? 那么这段话本来是要用于展示在某个 label 上的,但由于返回值为空, 屏幕上空空如也, 用户好几脸懵逼, PM 和 QA 的同事火速杀到你的工位前......
 总之,不用我说,你应该能明白我意思了, 这就是我说的:
@@ -99,7 +98,7 @@ Anyway, 还是建议你把代码转成 ARC 吧! 不知道怎么转, 看下图
 
 我们再来看一个例子说明下不正确的宏注释产生的问题,在`NS_ASSUME_NONNULL_BEGIN` 和 `NS_ASSUME_NONNULL_END` 之间的属性都会被默认为 `nonnull` 类型, 那么看下面的代码: 
 
-![](http://upload-images.jianshu.io/upload_images/406302-539aae6d5b2a6fa8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![09](09.jpg)
 
 在日常的工作中,我们经常是从某个人手里接过来一段代码进行开发, 假设在这个文件里, 由于整个代码已经到了近 1000 行, 且有好几个类在同一个 `.m` 文件中, 所以两个宏写的非常隐蔽, 你根本没有察觉到它们的存在.  
 
@@ -110,8 +109,9 @@ Anyway, 还是建议你把代码转成 ARC 吧! 不知道怎么转, 看下图
 ## Runtime Issue
 
 说完了Static Analyzer, 我们来说说 Runtime Issue 这个东西,就像下面这个图展示的一样, 你可以认为以后见到这个紫色的感叹号标志就是一个 runtime issue , 哦, 顺道说一下左边的两个分别是 Error 和 Warnning 状态, 右边的两个分别是 Static Analyzer Issue 和 UI Test Failed 的状态, 不同于其余这些东西的出现时间, runtime issue 是出现在程序运行期间的
- 
-![](http://upload-images.jianshu.io/upload_images/406302-459dffa8ea0a5fbe.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
+
+![10](10.jpg)
+
 
 目前支持 Runtime Issue 的工具有三个, 分别是 Debug View Hierarchy , Thread Sanitizer 和 Debug Memory Graph , 我们会在下面的话题一个个介绍给大家! 
 
@@ -120,9 +120,9 @@ Anyway, 还是建议你把代码转成 ARC 吧! 不知道怎么转, 看下图
 ## View Debugging Enhancements
 View Debugging 到底指的是什么呢? 我想各位看英文时候可能有点懵逼, 但看完下面两张图是不是瞬间明白我在说神马了!!!
 
-![](http://upload-images.jianshu.io/upload_images/406302-9e1ffd2219f9aff4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![11](11.jpg)
 
-![](http://upload-images.jianshu.io/upload_images/406302-5fab644961acc4e5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![12](12.jpg)
 
 嗯呐, 就是这个功能叫做 View Debugging, 也可以叫做 Debug View Hierarchy, anyway, 你喜欢啥就叫啥吧,
 
@@ -141,18 +141,18 @@ View Debugging 到底指的是什么呢? 我想各位看英文时候可能有点
 #### layout and transform accuracy
 这到底是说神马呢? 难道是说以前的 layout 和 transform 不准确么? No, No, No, 并不是说以前不准确,而是说现在比以前更精确了, What, 我说的话是不是好绕,还是直接上图吧...
 
-![](http://upload-images.jianshu.io/upload_images/406302-63827dd949eb6d04.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![13](13.jpg)
 
-![](http://upload-images.jianshu.io/upload_images/406302-7a401cbfac0753b3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![14](14.jpg)
 
-![](http://upload-images.jianshu.io/upload_images/406302-ec0a20f3b9b1f556.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![15](15.jpg)
 
 所以说你看出来神马名堂了么? 在 Xcode 8 里能够更加精确的表明这些约束的意义, 例如是否是等比例缩放(第一张的比例值), 是否是权值较低的约束(第二张的虚线段), 是否是一个不绝对相等的约束(第三张的小于等于). 这些在 Xcode 7 里都是没有体现出来的, 总之通过这些标记, 能够让我们更加清晰的了解到这些约束的意义, 而不只是一根实线而已
 
 #### blur rendering
 这是说在新的 debug 模式下,我们能够看到 blur 层了. 是不是很美好
 
-![](http://upload-images.jianshu.io/upload_images/406302-6504d3f9968a2dfc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![16](16.jpg)
 
 #### navigator filtering
 这个东西我觉得还是蛮好使的, 因为原先在 Navigator 里找某个控件时, 真的很难, 尤其在那种结构复杂的界面里, 就看着自己点着那个三角按钮一遍又一遍的... 
@@ -161,7 +161,7 @@ Xcode 8 在今年很好的解决了这些个问题, 我们现在在 Navigator �
 
 这样一来, 找控件就变得很 easy 了, 是不是!!! 不信, 你看下面的这张图. 
 
-![](http://upload-images.jianshu.io/upload_images/406302-0973bdb86577f0c8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![17](17.jpg)
 
 #### jump to class 
 这个新增的功能充分体现了苹果工程师的人文关怀, 试想一下, 我们每次在定位到对应的控件后, 如果想要修改其 layout 的相关属性时, 有些人会到左边的 Project Navigator 中的层级结构里找对应的`.m`或者`.h`文件, 熟悉快捷键的人可能会用 `Cmd + Shit
@@ -169,16 +169,15 @@ Xcode 8 在今年很好的解决了这些个问题, 我们现在在 Navigator �
  
 但在Xcode 8 之后, 我们只需要去 UI 控件的 Object Inspector 的界面里点一下右边深灰色的前进按钮, 嗖的一下,我们就跳转到了对应类的文件中
 
-![](http://upload-images.jianshu.io/upload_images/406302-543685f210b66b46.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![18](18.jpg)
 
 #### auto layout debugging
 这个功能就要结合之前的 runtime issue 话题了, 废话少说, 先上个图给你们瞅瞅.
 
-![](http://upload-images.jianshu.io/upload_images/406302-cdca1cc161df6c77.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![19](19.jpg)
 
 我们可以看到,如果我们在布局控件中有错误的话, 我们点击 Debug View Hierarchy 后, Xcode 8 就会报出来一堆 Runtime Issue , 这个功能是不是很吊, 以后写约束再也不怕不怕啦, 毕竟有错, 咱们就按提示改呗. 
 
- 
 ### Debug Workflow
 这一块的内容并不是某个 Session 里提到的, 而是我在看这些个 WWDC 后总结出来的, 你可以发现苹果的工程师在解决这些问题时, 都是有一个套路的, 套路的英文我也不知道是啥, 就用个 workflow 吧.
 他们在解决带有 runtime issue 的问题时, 都会遵循这样一个解决思路
@@ -188,18 +187,18 @@ Xcode 8 在今年很好的解决了这些个问题, 我们现在在 Navigator �
 3. Debug Navigator : 在这些界面上了解其层级结构, 调用顺序, 堆栈信息, 对象持有的层级结构图等信息
 4. Inspector : 查看具体的细节,并分析错误的原因
 5. Source code : 使用 jump to class 功能进入源代码,并修改
- 
+
 至于这个东西, 我觉得可能需要大家自己在实践中慢慢体会, 才会更深入的理解为什么会有这些 debug 工具的产生和为什么他们要在这里提示. 
 当然这也是个仁者见仁,智者见智的问题, anyway 你若安好, 便是晴天! 
 
 ## Memory Graph Debugging
 讲完了 View Debugging Enhancement , 我们来说说今年 Xcode 8 推出的 Memory Graph Debugging.
-  
+
 最近看到很多公众号和微博都有朋友在说这个特性, 我在这里就不花费太多的篇章去讲它, 更多的说说我觉得在其他文章里没提到的东西吧.
 
 在说这个东西之前, 不知道大家是否知道以下三个命令, 如果没有大家不妨在自己的机子上试一试
 
-```
+```s
 $ heap YourAppName
 $ leaks YourAppName
 $ malloc_history YourAppName Address
@@ -212,15 +211,15 @@ $ malloc_history YourAppName Address
 ### How to use
 那么我们接着说说如何使用它吧, 它的使用方式很简单, 在 app 运行的时候, 点击 Debug View Hierarchy 按钮旁边的 Debug Memory Graph 按钮即可, 对就是那个三个圆圈两个线的按钮.
 
-![](http://upload-images.jianshu.io/upload_images/406302-48f0377ad7f20e1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![20](20.jpg)
 
 哦, 对了如果你想看到对象的 malloc_history, 记得在 Diagnostic Scheme Tab 页面里面选择 Malloc Stack , 否则你是看不到任何信息的, 命令行也是如此, 另外, 苹果的工程师还说如果勾选了 Malloc Scribble, 整个结果会更加精确
 
-![](http://upload-images.jianshu.io/upload_images/406302-3caa56c7083929c8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![21](21.jpg)
 
 那么我们来看看点击 Debug Memory Graph 按钮后的效果吧
 
-![](http://upload-images.jianshu.io/upload_images/406302-c2b4008a1d674a45.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![22](22.jpg)
 
 通过这段时间的使用呢, 大致总结出来这样的一些规律
 
@@ -245,11 +244,10 @@ $ malloc_history YourAppName Address
 
 对于喜欢命令行的小伙伴来说, 苹果还提供了一下的操作指令
 
-```
+```s
 $ leaks --outputGraph=<path> <process>                    //creates .memgraph file
 $ {leaks|vmmap|heap} <path/to/file.memgraph> [options]    //operate on .memgraph file
 ```
-
 
 ## Sanitizer
 ### What does Sanitizer mean?
@@ -265,18 +263,18 @@ Session 413 中, 苹果的工程师给出以下条目来介绍 Sanitizer:
 
 那么到底 Sanitizer 在 Xcode 里怎么使用呢? 其实很简单, 打开 Product -> Scheme -> Edit Scheme, 就会弹出如下的界面, 我们在 Diagnostics 中能够看到这样一个标题 `Runtime Sanitization`, 在它下面有 `Address Sanitize` 和 `Thread Sanitizer` 两个选项, 我们只需要勾选相应的 Sanitizer 即可.
 
-![](http://upload-images.jianshu.io/upload_images/406302-f5937a21f5bc2e2c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
- 
+![23](23.jpg)
+
 说到这里还必须多说几句, 此处如果你只是勾选了相应的选项并不代表你就能使用 Sanitizer 来 Check 代码了, 你还必须重新 run 一下代码, 为什么呢? 
 
 这就必须说说整个代码 build flow 了. 如下图所示, 通过勾选了对应的选项, Xcode 会向 clang 传递一个特定的参数, 然后生成一个独特的 binary, 然后这个 binary 会和 Thread Sanitizer 或者 Address Sanitizer 的 dylib 链接在一起. 这样 Sanitizer 就实现了它想要达到的功能. 
 
-![](http://upload-images.jianshu.io/upload_images/406302-b3a58fd1cf107857.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![24](24.jpg)
 
 至于每个 Sanitizer 的实现原理, 我这里就不过多描述了, 建议大家直接观看 WWDC 2015 Session 413 ( Address Sanitizer ) 和 WWDC 2016 Session 412 ( Thread Sanitizer ) , 我们这里还是着重介绍它们的使用方法和使用场景.
 
 总之, 你需要记住的就是, 在使用 Sanitizer 的时候, 要重新 Run 一下代码哦.
-  
+
 ### Address Sanitizer ( ASan ) 
 ASan 其实是 Xcode 在去年新增的一个功能, 它主要用于检测一些内存方面的错误, 在 Xcode 8 里, ASan 已经全面支持了 Swift, 这应该是它唯一新增的一个功能.
 
@@ -293,7 +291,7 @@ ASan 其实是 Xcode 在去年新增的一个功能, 它主要用于检测一些
 
 说了这么多,咱们来看看下面这段代码吧.
 
-![](http://upload-images.jianshu.io/upload_images/406302-9a992567b4d9d912.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![25](25.jpg)
 
 大家应该能够看出来如果用 `buffer[80]` 的话是会产生数组越界的问题, 虽然 malloc 了 80 个位置,但起始位置是从 0 开始的.   
 
@@ -326,7 +324,8 @@ $ xcodebuild -enableThreadSanitizer YES
 
 //Stop after the first error
 $ TSAN_OPTIONS=halt_on_error=1 ./executable
-``` 
+```
+
 
 哦, 还要加一句, TSan 现在只支持 64为 macOS, 以及 64位的 iOS 和 tvOS 的模拟器, 并不支持真机调试和 watchOS.
 
@@ -340,7 +339,8 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
 
 那么我们拿下面的这段代码来举例:
 
-```
+
+```objc
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self resetStatue];
@@ -364,11 +364,11 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
 
 这段代码的意思是,我们在 viewDidLoad 方法里面重新 reset 自己的状态, 为了防止多个线程去访问同一个 dataArray 属性, 造成 data race 的状态, 我们在 resetStatus 的时候需要加锁, 但当前代码中,我们实际上调用的是一个没有初始化的锁 ( init 方法在 resetStatus 方法下面哦) , 但这段代码在实际运行的过程中,百分之九十九也不会出现 crash, 但有了 TSan 后, 我们来看看发生了什么变化
 
-![](http://upload-images.jianshu.io/upload_images/406302-9d2a08e5b865d35c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![26](26.jpg)
 
 发现 runtime issue 的标志了么! 看不清啊,那我们把左边的 Issue Navigator 放大一下
 
-![](http://upload-images.jianshu.io/upload_images/406302-a8a4442dbeee8fc5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![27](27.jpg)
 
 发现没有,在 Issue Navigator 中, TSan 明确的告诉了我们错误的类型, 而且把线程中的历史信息都记录了下来以便我们分析并解决这个问题, 有没有很贴心!
 
@@ -383,7 +383,7 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
 
 我们先看一下代码的使用场景, 我们假设有三个售票员在卖票, 票的数量由 `ticketsCount` 决定, 同时我们将售票员抽象成一个线程类:
 
-```
+```objc
     self.ticketsCount = 100;
     
     NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(saleTicket) object:nil];
@@ -402,7 +402,7 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
 
 然后我们执行下面的这段代码
 
-```
+```objc
     for (NSUInteger count = self.ticketsCount; count > 0; count--) {
         if (count > 0) {
             [NSThread sleepForTimeInterval:0.1];
@@ -425,11 +425,11 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
 
 会发生什么呢? 显而易见,由于没有加锁, 售票员会卖出去不该卖出去的票
 
-![](http://upload-images.jianshu.io/upload_images/406302-fa93ac20dfdd9071.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![28](28.jpg)
 
 那我们加个锁试试?
 
-```
+```objc
     @synchronized (self) {
         for (NSUInteger count = self.ticketsCount; count > 0; count--) {
             if (count > 0) {
@@ -453,11 +453,11 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
 
 加锁后,我们发现售票员确实没有再卖出去不该卖的票,但是好像只有一个售票员在卖票.  
 
-![](http://upload-images.jianshu.io/upload_images/406302-06af1dd4b1f23cb0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![29](29.jpg)
 
 这显然是一个逻辑错误, 我们锁住更像是线程, 而不是资源, 所以我们再改进一下
 
-```
+```objc
     while (1) {
         @synchronized (self) {
             if (self.ticketsCount > 0) {
@@ -477,12 +477,11 @@ $ TSAN_OPTIONS=halt_on_error=1 ./executable
             }
         }
     }
-
 ```
 
 来看看打印台的结果
 
-![](http://upload-images.jianshu.io/upload_images/406302-59117ef3dd49a63b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![30](30.jpg)
 
 看起来是不是特别完美! 不同的售票员在卖票, 而且也没有出现卖出去不该卖的票, 但是其实这段代码还是有潜在风险的. 
 
@@ -497,7 +496,7 @@ PS: 如果你比较懒的话, 好好想想 `dispatch_async` 用的对么? 如果
 ## Recap
 
 总结一下今天我们到底说了些什么:
-  
+
 * 一种新的文件格式 : `.memgraph`  
 * 两个新的概念 : `Debug workflow` 和 `Runtime issue`  
 * 三类 debug 工具 : `Sanitizer`, `View Hierarchy Debug Tool` , `Memory Graph Debug Tool`
@@ -510,7 +509,6 @@ PS: 如果你比较懒的话, 好好想想 `dispatch_async` 用的对么? 如果
 [WWDC 2016 Session 412 - Thread Sanitizer and Static Analysis](https://developer.apple.com/videos/play/wwdc2016/412/)
 
 [WWDC 2015 Session 413 - Advanced Debugging and the Address Sanitizer](https://developer.apple.com/videos/play/wwdc2015/413/)
-
 
 ## Demo Code
 示例代码可以在[这里](https://github.com/SketchK/SketchK.github.io/tree/blog-code/2016-10-20-NewDebuggingFeatureInXcode8)获得。

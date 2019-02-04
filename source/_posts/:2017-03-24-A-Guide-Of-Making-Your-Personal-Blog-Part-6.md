@@ -12,7 +12,7 @@ categories:
 
 <!-- more -->
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+![01](01.png)
 
 **A Guide Of Making Your Personal Blog 系列**
 
@@ -37,19 +37,19 @@ categories:
 
 * 持续集成（Continuous integration）就是频繁地（一天多次）将代码集成到主干。它的目的就是让产品可以快速迭代，同时还能保持高质量。它的核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-c5c8e6f40c7c133e22402c00bb7e1a25_b.png)
+![02](02.png)
 
 * 持续交付（Continuous delivery）在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的 "类生产环境"（production-like environments）中。比如，我们完成单元测试后，可以把代码部署到连接数据库的测试环境中。如果代码没有问题，可以继续手动部署到生产环境中。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-040402.jpg)
+![03](03.jpg)
 
 * 持续部署（continuous deployment）是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。持续部署的前提是能自动化完成测试、构建、部署等步骤。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-f96f19e4d567aad5006d841963a86e41_b.png)
+![04](04.png)
 
 说完这三个概念，我们来说说 `Travis CI`，你可以把它理解为一种服务。总之它的主要任务就是处理持续集成，持续交付和持续部署的相关事宜，而且很重要的一点就是它对 `GitHub` 的支持十分友好，加上它的免费策略，我们没有理由不去选择它，当然你也完全可以用 [Jenkins](https://jenkins.io/) 等类似的服务。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-26-Travis-CI-logo.jpg)
+![05](05.jpg)
 
 好了，`Travis CI` 的介绍到此结束了，我们下面就来说说如何利用 `Travis CI` 来实现自动部署吧。
 
@@ -67,7 +67,7 @@ categories:
 
 如果看文字比较晕，可以看看我画的这张图。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-Jietu20170321-141558-2x.jpg)
+![06](06.png)
 
 我想结合着文字和图片，你已经明白我们要干什么了，所以如果我们实现了这个方案，在这样的自动化流程下，我们唯一需要做的事情就是 `push` 文章到 `blog-source` 分支，其他的事情交给 Travis CI 了。
 
@@ -100,15 +100,15 @@ $ git push -u origin blog-source
 
 最后的效果就是，当你点击 `branch` 按钮的时候，你会发现多了一个 `blog-source` 分支。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-065531.jpg)
+![07](07.jpg)
 
 不过在结束这一步之前，让我们来看一下 `blog-source` 分支中的 `themes` 文件夹，你会发现 `next` 文件夹是一个空文件夹，里面并没有任何文件，这是为什么呢？
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-22-Jietu20170322-165659.jpg)
+![08](08.jpg)
 
 原因很简单，就是之前我们使用了 `git clone https://github.com/iissnan/hexo-theme-next themes/next` 的方式引入第三方主题，这个命令会在本地电脑的 `next` 文件夹下生成 `.git` 文件夹，这也就意味着 `next` 文件夹也使用了 `Git` 来进行版本管理，自然而然的这个 `next` 文件夹就不会纳入到站点根目录的版本管理中。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-22-093535.jpg)
+![09](09.jpg)
 
 所以把 `next` 文件夹下的 `.git` 文件删除，重新进行一次提交。
 
@@ -119,11 +119,11 @@ $ git push -u origin blog-source
 ### 开启仓库的 Travis CI 功能
 登录 [`Travis CI`](https://travis-ci.org/) 的网站，使用 `GitHub` 账户登录，成功登录后点击右边的头像，会弹出来个下拉菜单，点击 `Accounts` 按钮
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-072723.jpg)
+![10](10.jpg)
 
 这时候你会在界面上看到你在 `GitHub` 里的所有仓库，我们只需要打开存有博客资源的仓库即可。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-075505.jpg)
+![11](11.jpg)
 
 这时候点击 `SketchK/SketchK.github.io` 会跳入这个项目的详情页，点击右上角的 `More options` 里的 `Setting` 按钮，就会进入下面的页面，我们可以打开 `build only if .travvis.yml is present` 和 `build branch updates`， 至于 `build pull request updates` 可以根据自己的实际情况来选择是否开启。
 
@@ -136,7 +136,7 @@ $ git push -u origin blog-source
 * `Limit concurrent jobs`: 是否限制同时执行的操作数量
 * `Build pull request updates`：是否在 PR 合入后执行构建
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-Jietu20170321-160825-2x.jpg)
+![12](12.jpg)
 
 到这一步， 我们已经开启了要构建的仓库，但此时 `Travis CI` 还没法帮助我们自动构建并部署。
 
@@ -158,11 +158,11 @@ $ git push -u origin blog-source
 
 一种方式就是我们可以在本地对文件（这里指私钥，比如 `id_rsa` 文件）进行加密，然后把加密过后的文件放在项目里，那么别人就无法获取里面的真实内容。然后我们在让 `Travis` 执行脚本的时候，在读取加密文件之前对文件进行解密（使用的解密密码需要提前在 `Travis` 上配置好），这样就可以达到不将文件内容暴露，并且让 `Travis` 获取到真实内容的目的了，大概流程如下：
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-24-Jietu20170324-145042-2x.jpg)
+![13](13.jpg)
 
 第二种方式是利用了 `GitHub` 的 `Personal Access Token`，由于这个 `Token` 与 帐号密码 以及 `SSH Keys` 同样具有 `Github` 写入能力，因此只要使用 `Travis CI` 提供的加密工具来加密这个 `Token` 即可。 它的流程如下
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-24-Jietu20170324-154302-2x.jpg)
+![14](14.jpg)
 
 虽然这两种方式都可以解决问题，但实际操作起来都很麻烦，难道就没有什么别的方式了么 ？
 
@@ -183,21 +183,21 @@ git push -f -q https://<username>:$GITHUB_TOKEN@github.com/<username>/<repo>
 ### 生成 Personal Access Token
 登录 `GitHub` 的 `Setting` 页面，点击右边侧边栏的 `Personal access tokens` 后，进入下图所示的界面，此时点击右上角的 `Generate new token` 按钮
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-Jietu20170321-185415-2x.jpg)
+![15](15.jpg)
 
 点击完以后会要求你重新输入一遍 `GitHub` 的密码，然后就会进入下面的界面，这个界面大概是在说我们应该赋予这个 `token` 的权限有哪些，根据目前的要求，我们需要把 `repo` 选项框里的权限勾上即可，如果你的博客有一些特殊的需求，就根据自己的情况选择吧。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-26-141206.jpg)
+![16](16.jpg)
 
 勾选完后，点击最底下的 `Generate Token` 按钮，你就会得到一个 `token`，唯一需要注意的是 `token` 的值只会显示一次，所以记得把这个值保存一下。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-26-Jietu20170326-211812.jpg)
+![17](17.jpg)
 
 ### 在 Travis CI 上设置 Environment Variables
 
 现在让我们回到 `Travis CI` 的界面中，把 `Token` 的 `Name` 和 `Token` 的 `Valve` 填到 `Environment Variables` 中，然后再点击下 `Add` 按钮。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-21-112534.jpg)
+![18](18.jpg)
 
 现在 `Travis CI` 通过我们的设置已经与 `Personal Access Token` 产生了关联。
 
@@ -293,11 +293,11 @@ script:
 
 这时候我们需要看看几个没说过东西，下图是我们站点根目录的截图：
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-24-100818.jpg)
+![19](19.jpg)
 
 第一个就是 `package.json`, 打开它会发现该文件指定了我们所需要的 `Hexo` 和相应插件，而它是怎么知道的呢？其实这个文件是我们在本地配置 Hexo 及其相关插件时自动生成的，所以通过这个文件，`Travis CI` 在 执行 `npm install` 的时候就知道应该去下载何种软件，保证我们在执行 `hexo g` 的时候不会出错。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-24-Jietu20170324-180913-2x.jpg)
+![20](20.jpg)
 
 第二个就是 `node_modules`，Travis CI 通过 `package.json` 文件的内容去下载 `Hexo` 和相应插件，但下载完的东西需要放到哪里呢？`node_modules` 就是用来解决这个问题的。不过我们在 `blog-source` 分支中并没有看到这个文件夹，一方面是 `.gitignore` 里标明了排除这个文件夹，另一方面就是我们把 `node_modules` 文件夹里的内容 `push` 到 `blog-source` 上是没有意义的, 安装 `Hexo` 的工作可不是简单的把 `node_modules` 文件上传到 `Travis CI` 上就完事的。
 
@@ -326,7 +326,7 @@ git push --quiet https://<username>:$GITHUB_TOKEN@github.com/<username>/<repo>
 ## 测试一下
 做完这些工作后，我们把修改好的文件 `push` 到 `blog-source` 分支吧。然后再回到 `Travis CI` 的控制台看看发生了什么？
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-23-032710.jpg)
+![21](21.jpg)
 
 果不其然，`Travis CI` 已经检测到变化并进行构建部署了！ 点击下面的 `Job Log` 可以查看整个构建过程。
 

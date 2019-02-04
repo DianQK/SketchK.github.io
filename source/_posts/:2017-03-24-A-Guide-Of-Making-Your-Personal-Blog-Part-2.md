@@ -12,7 +12,7 @@ categories:
 
 <!-- more -->
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-blogging-SMB.png)
+![01](01.png)
 
 **A Guide Of Making Your Personal Blog 系列**
 
@@ -34,17 +34,18 @@ categories:
 
 2. 在搜索栏里寻找你感兴趣的域名，其实你随便输入一个字母就好，比如 `sketchk`
 
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-124814.jpg)
+	![02](02.jpg)
+
 
 3. 验证域名是否可用, 如果当前域名不可用会有提示，如果可用就会自动加到购物车
 
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-125025.jpg)
+	![03](03.jpg)
 
 4. 选好以后点右上角的 `Continue to Cart` 按钮
 
 5. 稍等一会，你会进入到下面的页面，
 	
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-03-2017-03-02-125800.jpg)
+	![04](04.jpg)
 	
 	* 第一个选项卡是在说，注册域名时，您的姓名、地址、电子邮件地址和电话号码都会自动发布到网上，大家都可以看见。借助 `GoDaddy` 隐私保护来保护自身免遭垃圾邮件和网络欺诈的侵害，它会将您的个人信息替换为 `GoDaddy` 的信息。
 	* 第二个选项卡是在说你是否愿意使用 `GoDaddy` 提供的搭建网站服务，也就是 `GoCentral` 服务。
@@ -67,7 +68,7 @@ categories:
 ### 关于服务器的几件事
 用于搭建网站的服务器大概有以下几种：虚拟主机，虚拟专享服务器以及专属服务器，它们之间的区别可以参考下图的说明：
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-071740.jpg)
+![05](05.jpg)
 
 像我们看到的大多数网站，其实都是“放”在服务器上的，然而，这个“放”其实并不像我们想的那么简单。
 
@@ -79,14 +80,14 @@ categories:
 
 因为我们必须告诉服务器去监控各种各样的网络请求，让它能够对这些浏览器发送的网络请求进行分析，以便服务器能够知道这个请求到底想干嘛，然后再把这个请求想要的信息（例如 `HTML`，`CSS`，`JavaScript`）返回给对应的浏览器，这样你就能在浏览器上就能看到正确的内容了。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-process.png)
+![06](06.png)
 
 > 小白：额，什么是网络请求啊？ 
 > SketchK：当你在浏览器上输入一个域名并敲击了回车就完成了一次网络请求！
 
 所以说了这么多，你是不是突然意识到买服务器只是“服务器”这个 topic 里的一小部分。不过不要担心，因为我们还有更简单的办法，比如 `GitHub Pages`! 
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-072951.jpg)
+![07](07.jpg)
 
 `Github Pages` 是 `GitHub` 公司提供的免费静态网站托管服务，所以从严格的角度上说，`GitHub Pages` 并不是一个服务器，它只是提供了一种类似服务器的服务！那么这个服务到底是什么呢？
 
@@ -104,12 +105,12 @@ categories:
 3. 开启 `GitHub Pages` 服务
 
 稍微等一下！`Git`, `GitHub`, `GitHub Pages` 这些都是神马东西！我已经完全不知所云了！Take it easy! 让我来简单的说明下吧：
- 
+
 * `Git` 是一种软件，通过它可以控制代码的版本  
 * `GitHub` 是一个代码的托管平台，支持 `Git` 作为其代码的版本控制软件  
 * `GitHub Pages` 是...(我刚才不是说过了么，忘了就自己看看上面的解释吧)  
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-Github2.png)
+![08](08.png)
 
 OK，废话就此结束了，准备实战！
 
@@ -120,12 +121,11 @@ OK，废话就此结束了，准备实战！
 
 > 当然也可以用 [`brew`](https://brew.sh/) 命令来安装 `Git`, 这里为了减少学习成本就不说  ` homebrew` 了，好奇的同学可以自己尝试
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-053621.jpg)
-
+![09](09.jpg)
 
 后面的事，咱就不用废话了。记住，安装完以后，在 terminal 上输入 `git --version` 来查看 Git 版本，只有安装成功才会显示出你的 Git 版本，所以你也可以通过这个方式来确认自己是否安装成功！
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-073045.jpg)
+![10](10.jpg)
 
 ### 注册 GitHub
 
@@ -133,7 +133,7 @@ OK，废话就此结束了，准备实战！
 
 * 登录 `GitHub` 的官网：[https://github.com/](https://github.com/)
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-064714.jpg)
+![11](11.jpg)
 
 * 点击 `Sing Up` 进行注册，注册的过程就不细说了，你肯定能搞定的！
 * 在注册邮箱里面查收激活邮件并激活 `GitHub` 账户。记住，一定要激活！否则后面无法使用 `GitHub Pages` 服务。 
@@ -160,7 +160,7 @@ OK，废话就此结束了，准备实战！
 
 	* 然后，点 `Add SSH Key`，填上任意 `Title`，在 `Key` 文本框里粘贴 `id_rsa.pub` 文件的内容：
 
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-063106.jpg)
+	![12](12.jpg)
 
 * 最后在终端里验证下是否配置成功
 
@@ -184,7 +184,7 @@ OK，废话就此结束了，准备实战！
 * 创建仓库
 	* 点击右上角的 `+` 号后，选择 `New rpoository`，会进入如下界面：
 	
-	![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-065819.jpg)
+	![13](13.jpg)
 
 	* 在 `Repository name` 下填写 `Your-GitHub-Name.github.io`，`Description` 下填写一些简单的描述，另外记得勾选下 `Initialize this repository with a README` 选项，
 
@@ -195,6 +195,6 @@ OK，废话就此结束了，准备实战！
 
 > 字号大的文字内容是仓库名称，字号小的是仓库信息。
 
-![](http://ocjyq2lpl.bkt.clouddn.com/2017-03-06-071136.jpg)
+![14](14.jpg)
 
 好了，关于域名和服务器的话题也算告一段落了。下一篇文章我们会说说博客框架的内容！
