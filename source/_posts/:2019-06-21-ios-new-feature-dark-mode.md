@@ -58,7 +58,7 @@ UIImage *image = [[[UIImage imageNamed:@"Header"] imageAsset] imageWithConfigura
 
 ## 2. 适配后的效果遵循哪种设计规范？
 
-在实际写代码前，我们还需更深刻的理解适配 Dark Mode 的工作意义。
+在实际写代码前，我们还需更深刻的理解适配 Dark Mode 这项工作背后的含义。
 
 虽然 Apple 给出了了许多好用的 API 帮助开发者迅速完成 Dark Mode 的适配，但这是你应该用的 API 么？例如系统给出了 `systemBlue`, `systemGray` 等 API 到底意味着什么？
 
@@ -136,7 +136,7 @@ let blurView = UIVisualEffectView(effect: UIBlurEffect.init(style: .systemMateri
 
 ### 3.3 图片素材的适配
 
-我们可以利用 xcassets 中为图片控件新增的 Apperance 属性，分别设置两种模式下所使用到的图片，例如在深色模式下展示日落的照片，而在普通模式下展示日出的照片)，
+我们可以利用 xcassets 中为图片控件新增的 Apperance 属性，分别设置两种模式下所使用到的图片，例如在深色模式下展示日落的照片，而在普通模式下展示日出的照片。
 
 ![01](01.jpg)
 
