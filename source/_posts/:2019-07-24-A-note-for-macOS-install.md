@@ -1,17 +1,17 @@
 ---
-title: 'A note for macOS install '
+title: 'A Better Development Environment for macOS'
 comments: true
 date: 2019-07-24 19:24:30
 updated:
 tags:
+  - macOS
 categories:
+  - DIY
 ---
 
-这是摘要
+前段时间公司给配了新电脑, 刚好把电脑重新折腾了一下, 这篇文章记录了一些自己的小心得, 方便日后回顾.
 
 <!-- more -->
-
-# Mac 重装流水账
 
 ## 系统通用设置
 
@@ -22,27 +22,27 @@ categories:
   * 显示文件扩展名
   * 标题栏显示完整路径
   
-  ```sh
-  defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
-  ```
+    ```sh
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+    ```
 
   * 显示隐藏文件
   
-  ```sh
-  defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
-  ```
+    ```sh
+    defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
+    ```
 
   * 显示用户资料库
 
-  ```sh
-  chflags nohidden ~/Library/
-  ```
+    ```sh
+    chflags nohidden ~/Library/
+    ```
 
   * 打开`允许安装任意来源软件`的选项
 
-  ```sh
-  sudo spctl —master-disable
-  ```
+    ```sh
+    sudo spctl —master-disable
+    ```
 
 ## Xcode 的安装
 
@@ -101,36 +101,41 @@ categories:
 * 设置 zsh `chsh -s /bin/zsh`
 * 安装 oh my zsh
 
-  ```sh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  ```
+    ```sh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    ```
 
 * 主题配置
   * Powerlevel9K: [GitHub - bhilburn/powerlevel9k: The most awesome Powerline theme for ZSH around!](https://github.com/bhilburn/powerlevel9k)
   * 通过 oh-my-zsh 安装
 
-  ```sh
-  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-  ```
+    ```sh
+    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+    ```
 
   * 在 `~/.zshrc` 中修改主题
 
-  ```sh
-  ZSH_THEME="powerlevel9k/powerlevel9k"
-  ```
+    ```sh
+    ZSH_THEME="powerlevel9k/powerlevel9k"
+    ```
 
 ### ZSH 的进阶修改
 
 * 自定义提示符
-  * Prompt Customization 章节有详细说明,通过这些配置,可以实现展示每个工程的环境版本号
+  * Prompt Customization 章节有详细说明, 通过这些配置, 可以实现很多方便的功能, 例如展示每个工程中不同语言环境的版本号
 
-  ![01](01.jpg)
+    ![01](01.jpg)
 
 * 字体文件
 
   * Nerd字体: [GitHub - ryanoasis/nerd-fonts: Iconic font aggregator, collection, and patcher. 40+ patched fonts, over 3,600 glyph/icons, includes popular collections such as Font Awesome & fonts such as Hack](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
 
     * 通过 homebrew 安装
+
+      ```sh
+      brew tap homebrew/cask-fonts
+      brew cask install font-hack-nerd-font
+      ```
 
     * 在 `~/.zshrc` 中增加对该字体的支持
       * `POWERLEVEL9K_MODE=‘nerdfont-complete’`
@@ -166,11 +171,11 @@ categories:
 * 安装过程中的注意事项
   * 安装完毕后，需要在 zshrc 里添加如下代码
 
-  ```sh
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm*
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-  ```
+    ```sh
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm*
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    ```
 
   * 官方给出的 NVM_DIR 定义是 `export NVM_DIR=“${XDG_CONFIG_HOME/:-$HOME/.}nvm”` ，需要注意 `XDG_CONFIG_HOME` 这个定义
 
@@ -180,9 +185,9 @@ categories:
   * 执行 gpg 命令出现语言问题的情况，需要在 `.zshrc` 里声明当前环境下的语言 `export LANG=en_US.UTF-8`
   * 执行 gpg 命令出现 `keyserver receiver faild` 无法生成的问题时，尝试以下解决方案
 
-  ```sh
-  gpg --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-  ```
+    ```sh
+    gpg --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+    ```
 
 ### Python && pyenv
 
@@ -190,17 +195,16 @@ categories:
   * pyenv 作者给出了自动安装的脚本：[GitHub - pyenv/pyenv-installer: This tool is used to install `pyenv` and friends.](https://github.com/pyenv/pyenv-installer)
   * 需要注意的是，在 zshrc 里面添加下面的代码
 
-  ```sh
-  export PATH="$HOME/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-  ```
+    ```sh
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+    ```
 
-## 整体配色
+## 配色方案
 
 * [Dracula — A dark theme for iTerm and 50+ apps](https://draculatheme.com/iterm/)
 
 ## 编程字体
 
 * Input 字体: [Input: Fonts for Code](https://input.fontbureau.com/)
-
