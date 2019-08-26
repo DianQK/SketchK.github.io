@@ -54,7 +54,7 @@ comment:
   # Livere  site: https://livere.com/
   # livere_uid: MTAyMC8yNzgxNS80Mzkx
   # Disqus  site: https://disqus.com/
-  disqus_shortname: sketchk.xyz
+  disqus_shortname: sketchk-xyz
   # Changyan  site: http://changyan.kuaizhan.com/
   changyan_appid:
   changyan_conf:
@@ -83,5 +83,6 @@ favicon: /images/favicon.png
 truncate_length: 150
 # enable toc
 toc: true
+# 字数统计 & 阅读时间
 reading_info: true
 
