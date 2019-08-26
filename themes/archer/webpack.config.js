@@ -1,10 +1,14 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/js/main.js',
+  entry: {
+    main: './src/js/main.js',
+    share: './src/js/share.js',
+    search: './src/js/search.js'
+  },
   output: {
     path: path.join(__dirname, './source/scripts'),
-    filename: 'main.js'
+    filename: '[name].js'
   },
   devtool: 'none',
   module: {
