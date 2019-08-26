@@ -78,12 +78,12 @@ comment:
   # Livere  site: https://livere.com/
   # livere_uid: MTAyMC8yNzgxNS80Mzkx
   # Disqus  site: https://disqus.com/
-  # disqus_shortname: sketchk-xyz
+  disqus_shortname: sketchk-xyz
   # Gitment  site: https://github.com/imsun/gitment
-  gitment_owner: SketchK
-  gitment_repo: BLOG
-  gitment_client_id: 1acbc0ee74b0bcecc74e
-  gitment_client_secret: 84ea0c1fec26aad422cfbb1a434fe079dab4b880
+  # gitment_owner: SketchK
+  # gitment_repo: BLOG
+  # gitment_client_id: 1acbc0ee74b0bcecc74e
+  # gitment_client_secret: 84ea0c1fec26aad422cfbb1a434fe079dab4b880
   # Youyan  site: http://www.uyan.cc/
   youyan_uid: 
   # Valine  site: https://valine.js.org/
