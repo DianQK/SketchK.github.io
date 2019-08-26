@@ -36,15 +36,11 @@ friends:
   瓜瓜: https://www.desgard.com/
   羊神: https://www.sunnyyoung.net/
   Ming: http://zesming.com/
-  VP: https://maizee.github.io/
   御姐: http://forelax.space/
-  # friendC:
 about:
   enable: true
   image: '/intro/about-bg.jpg'
-someThing:
-  enable: true
-  image: '/intro/about-bg.jpg'
+
 
 # ========== Site ========== #
 # title of the site (good for SEO)
