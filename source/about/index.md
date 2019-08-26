@@ -25,5 +25,3 @@ comments: false
 性格大变 火速变成腹黑怪蜀黍 虽屡被劝阻要积口德
 
 但谁叫咱是摩羯座...
-
-![](http://ocjyq2lpl.bkt.clouddn.com/2018-02-23-20140622-DSC_0373.jpg)

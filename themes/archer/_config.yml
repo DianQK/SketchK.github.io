@@ -12,7 +12,7 @@ social:
   twitter: https://twitter.com/SketchK_QiYe
   weibo: http://weibo.com/u/1673935657
   # wechat and qq should be a path of qr-code image
-  wechat: /assets/example_qr.png
+  # wechat: /assets/example_qr.png
   qq: 
   telegram: 
   zhihu: 
@@ -40,6 +40,9 @@ friends:
   御姐: http://forelax.space/
   # friendC:
 about:
+  enable: true
+  image: '/intro/about-bg.jpg'
+someThing:
   enable: true
   image: '/intro/about-bg.jpg'
 
