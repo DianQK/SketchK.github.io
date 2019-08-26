@@ -23,11 +23,10 @@ friends:
   靛青君: https://blog.dianqk.org/
   Cee妹: http://blog.cee.moe/
   Sai姐: http://saitjr.com
-  羊神: https://www.sunnyyoung.net/
   瓜瓜: https://www.desgard.com/
+  羊神: https://www.sunnyyoung.net/
   Ming: http://zesming.com/
   VP: https://maizee.github.io/
-  水水: http://yousanflics.com.cn
   御姐: http://forelax.space/
   # friendC:
 about:
@@ -53,17 +52,17 @@ _404_image: '/intro/404-bg.jpg'
 # If you want to add other comment plugin, edit in "custom.ejs"
 comment:
   # Livere  site: https://livere.com/
-  livere_uid: MTAyMC8yNzgxNS80Mzkx
+  # livere_uid: MTAyMC8yNzgxNS80Mzkx
   # Disqus  site: https://disqus.com/
   disqus_shortname:
   # Changyan  site: http://changyan.kuaizhan.com/
   changyan_appid:
   changyan_conf:
   # Gitment  site: https://github.com/imsun/gitment
-  gitment_owner:
-  gitment_repo:
-  gitment_client_id:
-  gitment_client_secret:
+  gitment_owner: SketchK
+  gitment_repo: BLOG
+  gitment_client_id: 1acbc0ee74b0bcecc74e
+  gitment_client_secret: 84ea0c1fec26aad422cfbb1a434fe079dab4b880
   # Youyan  site: http://www.uyan.cc/
   youyan_uid:
 
@@ -84,3 +83,5 @@ favicon: /images/favicon.png
 truncate_length: 150
 # enable toc
 toc: true
+reading_info: true
+
