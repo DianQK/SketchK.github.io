@@ -40,10 +40,6 @@ friends:
 about:
   enable: true
   image: '/intro/about-bg.jpg'
-book:
-  enable: true
-  image: '/intro/about-bg.jpg'
-
 
 # ========== Site ========== #
 # title of the site (good for SEO)
