@@ -28,4 +28,9 @@
             <a href = "<%- url_for("/about") %>" >ABOUT ME</a>
         </div>
     <% } %>
+    <% if(theme.bookshelf.enable) { %>
+        <div class="about-me">
+            <a href = "<%- url_for("/bookshelf") %>" >BOOKSHELF</a>
+        </div>
+    <% } %>
 </div>
