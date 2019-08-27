@@ -74,12 +74,11 @@ deploy:
   branch: master
 
 # Search - Algolia
-# algolia:
-#   applicationID: 'G6MCPNGRPS'
-#   apiKey: '8749ddd25667ecc400c6257f0119ee47'
-#   adminApiKey: '96c6c76008541068bbdb5927d207fbf5'
-#   indexName: 'Blog'
-#   chunkSize: 5000
+algolia:
+  applicationID: '8XR5ZUM1HI'
+  apiKey: '11c3f9b192c58a1b5658eaac53ce031d'
+  indexName: 'My_Blog'
+  chunkSize: 5000
 
 search:
   path: search.xml
