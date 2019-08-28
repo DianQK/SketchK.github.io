@@ -42,7 +42,10 @@ about:
   image: '/intro/about-bg.jpg'
 bookshelf:
   enable: true
-  image: '/intro/about-bg.jpg'
+  image: '/intro/bookshelf.jpg'
+course:
+  enable: true
+  image: '/intro/course-bg.jpg'
 
 # ========== Site ========== #
 # title of the site (good for SEO)
