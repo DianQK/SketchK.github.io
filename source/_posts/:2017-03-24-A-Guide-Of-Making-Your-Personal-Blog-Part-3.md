@@ -2,7 +2,7 @@
 title: A Guide Of Making Your Personal Blog - Part 3
 comments: true
 date: 2017-03-24 23:42:18
-updated:
+updated: 2019-08-29 20:51:43
 tags:
 	- Blog
 categories:
@@ -11,6 +11,10 @@ categories:
 ---
 
 <!-- more -->
+
+> 2019-08-29 20:51:43
+>  
+> * 更新了 Github 服务器的 IP 地址，详情见 `解释下在 DNSPods 里的操作` 里的备注。
 
 ![01](01.png)
 
