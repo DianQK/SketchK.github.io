@@ -25,3 +25,31 @@ comments: false
 性格大变 火速变成腹黑怪蜀黍 虽屡被劝阻要积口德
 
 但谁叫咱是摩羯座...
+
+## Follow & Subscribe
+
+平日我主要出没在 [微博](https://weibo.com/u/1673935657?is_all=1) 和 [Twitter](https://twitter.com/SketchK47) 上，不过大多数时间都是潜水员一个。
+
+如果你对我的代码感兴趣，你也可以在 [Github](https://github.com/SketchK) 上联系到我。
+
+当然联系我的最便捷方式还是电子邮件，我的邮箱地址是: [zhangsiqi1988@gmail.com](mailto:zhangsiqi1988@gmail.com)
+
+如果你喜欢我的博客，也可以在首页的侧边栏里订阅。
+
+欢迎任何技术方面的交流与讨论！
+
+## About This Blog
+
+这个博客使用的是 [Hexo 框架](https://hexo.io/zh-cn/index.html)，主题是基于 [Archer](https://github.com/fi3ework/hexo-theme-archer) 改造的。
+
+博客的发布流程实现了自动化，只需要向 Github 提交源码就会完成构建，部署，发布等一系列工作。如果你感兴趣我是怎么实现的,可以查看我写的相关文章:
+
+* A Guide Of Making Your Personal Blog 系列
+
+  * [Part 1：概述](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-1/)
+  * [Part 2：域名与服务器](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-2/)
+  * [Part 3：域名解析](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-3/)
+  * [Part 4：博客框架](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-4/)
+  * [Part 5：博客主题](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-5/)
+  * [Part 6：自动部署](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-6/)
+  * [Part 7：总结与参考资料](http://sketchk.xyz/2017/03/24/A-Guide-Of-Making-Your-Personal-Blog-Part-7/)

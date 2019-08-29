@@ -114,6 +114,13 @@ categories:
 
 ![09](09.jpg)
 
+> 备注：于 2019 年 8 月发现 Github 将服务器 IP 地址更新了，相关说明的链接： [DNS Configuration errors](https://help.github.com/en/articles/troubleshooting-custom-domains#dns-configuration-errors) ，所以上图里的记录值需要改为：
+>  
+> * 185.199.108.153  
+> * 185.199.109.153  
+> * 185.199.110.153  
+> * 185.199.111.153  
+
 ### 解释下在 GoDaddy 里的操作
 
 现在把我们在 `DNSPods` 里面干的事情算是搞明白了，我们是告诉了 `DNS` 服务器应该如何解析我们购买的域名，那么下一步就是告诉我们的域名在解析的时候去找刚才配置过的 `DNS` 服务器。

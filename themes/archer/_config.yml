@@ -11,6 +11,7 @@ social:
   github: https://github.com/SketchK
   twitter: https://twitter.com/SketchK47
   weibo: http://weibo.com/u/1673935657
+  rss: /atom.xml
   # wechat and qq should be a path of qr-code image
   # wechat: /assets/example_qr.png
   qq: 
@@ -27,7 +28,6 @@ social:
   linkedin: 
   steam: 
   others: 
-  rss: 
 # friends
 friends:
   靛青君: https://blog.dianqk.org/
@@ -42,10 +42,13 @@ about:
   image: '/intro/about-bg.jpg'
 bookshelf:
   enable: true
-  image: '/intro/bookshelf.jpg'
+  image: '/intro/about-bg.jpg'
 course:
   enable: true
-  image: '/intro/course-bg.jpg'
+  image: '/intro/about-bg.jpg'
+project:
+  enable: true
+  image: '/intro/about-bg.jpg'
 
 # ========== Site ========== #
 # title of the site (good for SEO)
