@@ -10,7 +10,13 @@ comments: false
 
 ## 这是我的学习记录
 
-### 计划学习的内容
+📺 表示视频教程或者网络课程  
+📖 表示书籍或者实体教程  
+🎙 表示电子读物（得到），音频课程（知乎 Live）  
+✅ 表示学习完毕  
+❌ 表示弃坑或者没有完成  
+
+### 2020 年计划学习的内容
 
 #### 文化与艺术
 
@@ -26,11 +32,11 @@ comments: false
 
 #### 个人能效类
 
-* 📖[高效能人士的七个习惯](https://book.douban.com/subject/26284789/)
-* 📖[番茄工作法](https://book.douban.com/subject/5916234/)
-* 📖[单核工作法](https://book.douban.com/subject/27177909/)
+* 📖[高效能人士的七个习惯](https://book.douban.com/subject/26284789/)【重读】
+* 📖[番茄工作法](https://book.douban.com/subject/5916234/)【重读】
+* 📖[单核工作法](https://book.douban.com/subject/27177909/)【重读】
 * 📖[自控力](https://book.douban.com/subject/10786473/)
-* 📖[金字塔原理](https://book.douban.com/subject/25775696/)
+* 📖[金字塔原理](https://book.douban.com/subject/25775696/)【重读】
 * 📖[通往财富自由之路](https://book.douban.com/subject/27170672/)
 * 📖[认知红利](https://book.douban.com/subject/34793488/)
 * 📖[认知天性](https://book.douban.com/subject/30353486/)
@@ -43,9 +49,9 @@ comments: false
 
 * 📖[Data Structures and Algorithms in Swift](https://store.raywenderlich.com/products/data-structures-and-algorithms-in-swift)
 * 📺[CS 50](https://cs50.harvard.edu/college/2020/spring/)
-* 📖[计算机是怎么跑起来的](https://book.douban.com/subject/26397183/)
+* 📖[计算机是怎么跑起来的](https://book.douban.com/subject/26397183/)【重读】
 * 📖[编码](https://book.douban.com/subject/20260928/)
-* 📖[程序是怎么跑起来的](https://book.douban.com/subject/26365491/)
+* 📖[程序是怎么跑起来的](https://book.douban.com/subject/26365491/)【重读】
 * 📖[30 天自制操作系统](https://book.douban.com/subject/11530329/)
 * 📖[自制编程语言](https://book.douban.com/subject/25735333/)
 * 📖[网络是怎么连接的](https://book.douban.com/subject/26941639/)
@@ -55,7 +61,7 @@ comments: false
 
 #### 软件开发
 
-* 📖[The Swift Programming Language (Swift 5.2)](https://docs.swift.org/swift-book/)
+* 📖[The Swift Programming Language (Swift 5.2)](https://docs.swift.org/swift-book/)【重读】
 * 📖[iOS Apprentice](https://store.raywenderlich.com/products/ios-apprentice)
 * 📖[Concurrency by Tutorials](https://store.raywenderlich.com/products/concurrency-by-tutorials)
 * 📖[Design Patterns by Tutorials](https://store.raywenderlich.com/products/design-patterns-by-tutorials)
@@ -108,6 +114,10 @@ comments: false
 
 > 学后感：课程将的思路还是挺清晰的，不过作为 TS 语言学习的课程的话，还是少了一些内容，第 5 章之后的内容没有继续看了，有时间继续看吧！
 
+* 🎙✅[如何自学计算机专业课程](https://www.zhihu.com/lives/837669764146003968) - 10 月
+
+> 学后感：终于知道计算机专业到底在干什么，那些所谓的基础又是什么，剩下的就是学习了，谢谢金老师！
+
 * 📖✅[怦然心动的人生整理魔法](https://book.douban.com/subject/30246907/) - 08 月
 
 > 读后感：在媳妇的推荐下，阅读了麻理慧小姐的这本书，与其说是一本教人收纳整理的书，倒不如把这本书看成教人如何看待人生的书，贯穿全书的一个核心思想就是：  
@@ -117,13 +127,29 @@ comments: false
 
 > 读后感：非常特别的一本书，不同与以往的鸡汤文，这本书通过一套完整的实验方案收集数据，并通过这些数据分析和推导出如何获得高绩效的七种方式。其中的结论不仅解释了我在实际工作中的困惑，也验证了我自己经过的遭遇，是我认为 2019 年读到的好书之一。
 
-* 📺❌[怎样学会正念冥想](https://www.igetget.com/course/%E6%80%8E%E6%A0%B7%E5%AD%A6%E4%BC%9A%E6%AD%A3%E5%BF%B5%E5%86%A5%E6%83%B3?param=pYntqSPf21&token=L6mQARNzM8r1KQ3fDNJe3dGOg0aPon) - 05 月
+* 🎙✅[[怎样学会正念冥想](https://www.igetget.com/course/%E6%80%8E%E6%A0%B7%E5%AD%A6%E4%BC%9A%E6%AD%A3%E5%BF%B5%E5%86%A5%E6%83%B3?param=pYntqSPf21&token=L6mQARNzM8r1KQ3fDNJe3dGOg0aPon) - 05 月
 
 > 学后感：初步了解了什么叫正念冥想，也大体知道了冥想的意义与价值，未来值得花更多的时间去理解和锻炼
 
 * 📺✅[Node.js入门到企业Web开发中的应用](https://coding.imooc.com/class/146.html) - 04 月
 
 > 学后感：课程在 NodeJS 的广度上更加突出，但深度上有所欠缺，作为入门视频算是及格的，在一些基本 API 的使用上也讲解的较为细致，不够这有时候是有点也是缺点吧。总体来说课程质量一般。
+
+* [如何高效学习](https://book.douban.com/subject/25783654/) - 03 月
+
+> 学后感：很好的一本书，既有一些理论，也有学习的技巧和方法，让我也重新认识了自己在学习过程中的问题和提升空间，值得来回读，中文版的翻译在某些地方并不完全准确，建议读原版
+
+* 📖✅[用更现代的方式做任务管理](https://book.douban.com/subject/30246907/) - 02 月
+
+> 学后感：结合之前的知乎 Live，可以很好的理解任务管理系统应该怎么搭建，怎么使用，怎么才有效！当然还是要明确任务管理，时间管理与精力管理的区别，任务管理不是万能的！
+
+* 🎙✅[做好个人记账，不当月光族](https://www.zhihu.com/lives/870371558789615616) 和 [面对不同情境，如何用对的 App 记好账](https://www.zhihu.com/lives/870369268372471808) - 02 月
+
+> 学后感：终于学会记账了！谢谢！
+
+* 🎙✅[个人任务管理入门](https://www.zhihu.com/lives/823230794934947840) 和 [个人任务管理进阶](https://www.zhihu.com/lives/823240334342492160) - 01 月
+
+> 学后感：很好的建立了任务管理的概念，也很透彻的分析了任务管理工具到底在干什么，虽然偏向个人的任务管理，但这套理论都是通用的，很干货！
 
 * 📺✅[React16.4开发简书项目 从零基础入门到实战](https://coding.imooc.com/class/229.html) - 01 月
 
