@@ -127,7 +127,7 @@ comments: false
 
 > 读后感：非常特别的一本书，不同与以往的鸡汤文，这本书通过一套完整的实验方案收集数据，并通过这些数据分析和推导出如何获得高绩效的七种方式。其中的结论不仅解释了我在实际工作中的困惑，也验证了我自己经过的遭遇，是我认为 2019 年读到的好书之一。
 
-* 🎙✅[[怎样学会正念冥想](https://www.igetget.com/course/%E6%80%8E%E6%A0%B7%E5%AD%A6%E4%BC%9A%E6%AD%A3%E5%BF%B5%E5%86%A5%E6%83%B3?param=pYntqSPf21&token=L6mQARNzM8r1KQ3fDNJe3dGOg0aPon) - 05 月
+* 🎙✅[怎样学会正念冥想](https://www.igetget.com/course/%E6%80%8E%E6%A0%B7%E5%AD%A6%E4%BC%9A%E6%AD%A3%E5%BF%B5%E5%86%A5%E6%83%B3?param=pYntqSPf21&token=L6mQARNzM8r1KQ3fDNJe3dGOg0aPon) - 05 月
 
 > 学后感：初步了解了什么叫正念冥想，也大体知道了冥想的意义与价值，未来值得花更多的时间去理解和锻炼
 
@@ -135,7 +135,7 @@ comments: false
 
 > 学后感：课程在 NodeJS 的广度上更加突出，但深度上有所欠缺，作为入门视频算是及格的，在一些基本 API 的使用上也讲解的较为细致，不够这有时候是有点也是缺点吧。总体来说课程质量一般。
 
-* [如何高效学习](https://book.douban.com/subject/25783654/) - 03 月
+* 📖✅[如何高效学习](https://book.douban.com/subject/25783654/) - 03 月
 
 > 学后感：很好的一本书，既有一些理论，也有学习的技巧和方法，让我也重新认识了自己在学习过程中的问题和提升空间，值得来回读，中文版的翻译在某些地方并不完全准确，建议读原版
 
