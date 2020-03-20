@@ -43,9 +43,6 @@ about:
 bookshelf:
   enable: true
   image: '/intro/about-bg.jpg'
-course:
-  enable: true
-  image: '/intro/about-bg.jpg'
 project:
   enable: true
   image: '/intro/about-bg.jpg'
